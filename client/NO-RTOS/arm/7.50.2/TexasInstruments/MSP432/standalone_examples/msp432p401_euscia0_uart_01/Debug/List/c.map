@@ -1,0 +1,255 @@
+###############################################################################
+#
+# IAR ELF Linker V7.50.2.10312/W32 for ARM                02/Jun/2017  05:21:08
+# Copyright 2007-2015 IAR Systems AB.
+#
+#    Output file  =  
+#        E:\Projects\ARM\2\arm\7.50.2\TexasInstruments\MSP432\standalone_examples\msp432p401_euscia0_uart_01\Debug\Exe\c.out
+#    Map file     =  
+#        E:\Projects\ARM\2\arm\7.50.2\TexasInstruments\MSP432\standalone_examples\msp432p401_euscia0_uart_01\Debug\List\c.map
+#    Command line =  
+#        E:\Projects\ARM\2\arm\7.50.2\TexasInstruments\MSP432\standalone_examples\msp432p401_euscia0_uart_01\Debug\Obj\msp432_startup_ewarm.o
+#        E:\Projects\ARM\2\arm\7.50.2\TexasInstruments\MSP432\standalone_examples\msp432p401_euscia0_uart_01\Debug\Obj\msp432p401_euscia0_uart_01.o
+#        -o
+#        E:\Projects\ARM\2\arm\7.50.2\TexasInstruments\MSP432\standalone_examples\msp432p401_euscia0_uart_01\Debug\Exe\c.out
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map
+#        E:\Projects\ARM\2\arm\7.50.2\TexasInstruments\MSP432\standalone_examples\msp432p401_euscia0_uart_01\Debug\List\c.map
+#        --config
+#        E:\Programs\IAR\ARM\arm\config\linker\TexasInstruments\msp432p401r.icf
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x2000ffff] { rw, block CSTACK, block HEAP };
+
+  Section             Kind        Address   Size  Object
+  -------             ----        -------   ----  ------
+"A1":                                      0x144
+  .intvec             const    0x00000000  0x144  msp432_startup_ewarm.o [1]
+                             - 0x00000144  0x144
+
+"P1":                                      0xda0
+  .text               ro code  0x00000144  0x700  msp432p401_euscia0_uart_01.o [1]
+  .text               ro code  0x00000844   0x42  strcmp_unaligned.o [5]
+  .text               ro code  0x00000888    0x6  ABImemclr4.o [5]
+  .text               ro code  0x00000890   0x16  strchr.o [5]
+  .text               ro code  0x000008a6    0x8  atoi.o [3]
+  .text               ro code  0x000008ae   0x28  strncmp.o [3]
+  .text               ro code  0x000008d8   0x44  strcpy_unaligned.o [5]
+  .text               ro code  0x0000091c   0x1c  strcat.o [3]
+  .text               ro code  0x00000938   0x32  ABImemset48.o [5]
+  .text               ro code  0x0000096c  0x19c  xstoul.o [3]
+  .text               ro code  0x00000b08   0x58  memchr.o [5]
+  .text               ro code  0x00000b60    0xc  errno.o [3]
+  .text               ro code  0x00000b6c    0x2  xtls.o [3]
+  .rodata             const    0x00000b70   0x58  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000bc8   0x50  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000c18   0x48  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000c60   0x3c  msp432p401_euscia0_uart_01.o [1]
+  .text               ro code  0x00000c9c   0x2c  copy_init3.o [5]
+  .rodata             const    0x00000cc8   0x28  msp432p401_euscia0_uart_01.o [1]
+  .text               ro code  0x00000cf0   0x28  data_init.o [5]
+  .text               ro code  0x00000d18   0x22  fpinit_M.o [4]
+  .iar.init_table     const    0x00000d3c   0x14  - Linker created -
+  .rodata             const    0x00000d50   0x20  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000d70   0x1c  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000d8c   0x1c  msp432p401_euscia0_uart_01.o [1]
+  .text               ro code  0x00000da8   0x1a  cmain.o [5]
+  .text               ro code  0x00000dc2    0x4  low_level_init.o [3]
+  .text               ro code  0x00000dc6    0x4  exit.o [3]
+  .text               ro code  0x00000dcc    0xa  cexit.o [5]
+  .text               ro code  0x00000dd8   0x14  exit.o [6]
+  .rodata             const    0x00000dec   0x14  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000e00   0x10  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000e10   0x10  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000e20   0x10  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000e30   0x10  msp432p401_euscia0_uart_01.o [1]
+  .text               ro code  0x00000e40    0xe  msp432_startup_ewarm.o [1]
+  .text               ro code  0x00000e4e    0xc  cstartup_M.o [5]
+  .rodata             const    0x00000e5c    0xc  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000e68    0xc  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000e74    0xc  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000e80    0xc  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000e8c    0xc  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000e98    0x8  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000ea0    0x8  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000ea8    0x8  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000eb0    0x8  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000eb8    0x8  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000ec0    0x8  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000ec8    0x8  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000ed0    0x8  msp432p401_euscia0_uart_01.o [1]
+  .rodata             const    0x00000ed8    0x8  msp432p401_euscia0_uart_01.o [1]
+  Initializer bytes   const    0x00000ee0    0x4  <for P2-1>
+  .rodata             const    0x00000ee4    0x0  copy_init3.o [5]
+                             - 0x00000ee4  0xda0
+
+"P2", part 1 of 2:                           0x4
+  P2-1                         0x20000000    0x4  <Init block>
+    __DLIB_PERTHREAD  inited   0x20000000    0x4  errno.o [3]
+                             - 0x20000004    0x4
+
+"P2", part 2 of 2:                         0x200
+  .noinit             uninit   0x20000004  0x200  msp432_startup_ewarm.o [1]
+                             - 0x20000204  0x200
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+          0x00000ee0   0x4
+    1 destination range, total size 0x4:
+          0x20000000   0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                        ro code  ro data  rw data
+    ------                        -------  -------  -------
+E:\Projects\ARM\2\arm\7.50.2\TexasInstruments\MSP432\standalone_examples\msp432p401_euscia0_uart_01\Debug\Obj: [1]
+    msp432_startup_ewarm.o             14      324      512
+    msp432p401_euscia0_uart_01.o    1 792      644
+    -------------------------------------------------------
+    Total:                          1 806      968      512
+
+command line: [2]
+    -------------------------------------------------------
+    Total:
+
+dl7M_tln.a: [3]
+    atoi.o                              8
+    errno.o                            12        4        4
+    exit.o                              4
+    low_level_init.o                    4
+    strcat.o                           28
+    strncmp.o                          40
+    xstoul.o                          412
+    xtls.o                              2
+    -------------------------------------------------------
+    Total:                            510        4        4
+
+m7M_tls.a: [4]
+    fpinit_M.o                         34
+    -------------------------------------------------------
+    Total:                             34
+
+rt7M_tl.a: [5]
+    ABImemclr4.o                        6
+    ABImemset48.o                      50
+    cexit.o                            10
+    cmain.o                            26
+    copy_init3.o                       44
+    cstartup_M.o                       12
+    data_init.o                        40
+    memchr.o                           88
+    strchr.o                           22
+    strcmp_unaligned.o                 66
+    strcpy_unaligned.o                 68
+    -------------------------------------------------------
+    Total:                            432
+
+shb_l.a: [6]
+    exit.o                             20
+    -------------------------------------------------------
+    Total:                             20
+
+    Gaps                               12        6
+    Linker created                              20
+-----------------------------------------------------------
+    Grand Total:                    2 814      998      516
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x00000d3c          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00000d50          --   Gb  - Linker created -
+?main                   0x00000da9         Code  Gb  cmain.o [5]
+FaultISR                0x00000e4b    0x2  Code  Lc  msp432_startup_ewarm.o [1]
+IO_SetLed               0x00000229  0x218  Code  Gb  msp432p401_euscia0_uart_01.o [1]
+NmiISR                  0x00000e49    0x2  Code  Lc  msp432_startup_ewarm.o [1]
+Region$$Table$$Base     0x00000d3c          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000d50          --   Gb  - Linker created -
+ResetISR                0x00000e41    0x8  Code  Gb  msp432_startup_ewarm.o [1]
+SIM900_PollCommand      0x00000209   0x20  Code  Gb  msp432p401_euscia0_uart_01.o [1]
+SIM900_ReadRespond      0x000001e1   0x28  Code  Gb  msp432p401_euscia0_uart_01.o [1]
+SIM900_WriteCommand     0x000001d3    0xe  Code  Gb  msp432p401_euscia0_uart_01.o [1]
+UART_ReadByte           0x0000016f   0x14  Code  Gb  msp432p401_euscia0_uart_01.o [1]
+UART_WriteByte          0x00000145   0x14  Code  Gb  msp432p401_euscia0_uart_01.o [1]
+UART_WriteString        0x00000159   0x16  Code  Gb  msp432p401_euscia0_uart_01.o [1]
+__aeabi_errno_addr      0x00000b61    0x6  Code  Gb  errno.o [3]
+__aeabi_memclr4         0x00000889         Code  Gb  ABImemclr4.o [5]
+__cmain                 0x00000da9         Code  Gb  cmain.o [5]
+__exit                  0x00000dd9   0x14  Code  Gb  exit.o [6]
+__iar_Errno             0x20000000    0x4  Data  Gb  errno.o [3]
+__iar_Memchr            0x00000b09         Code  Gb  memchr.o [5]
+__iar_Memset4_word      0x00000939         Code  Gb  ABImemset48.o [5]
+__iar_Memset8_word      0x00000939         Code  Gb  ABImemset48.o [5]
+__iar_Stoul             0x00000ab5    0x4  Code  Gb  xstoul.o [3]
+__iar_Stoulx            0x0000096d  0x142  Code  Gb  xstoul.o [3]
+__iar_Strchr            0x00000891         Code  Gb  strchr.o [5]
+__iar_copy_init3        0x00000c9d   0x2c  Code  Gb  copy_init3.o [5]
+__iar_data_init3        0x00000cf1   0x28  Code  Gb  data_init.o [5]
+__iar_dlib_perthread_access
+                        0x00000b6d    0x2  Code  Gb  xtls.o [3]
+__iar_init_vfp          0x00000d19         Code  Gb  fpinit_M.o [4]
+__iar_program_start     0x00000e4f         Code  Gb  cstartup_M.o [5]
+__iar_unaligned_strcmp  0x00000845         Code  Gb  strcmp_unaligned.o [5]
+__iar_unaligned_strcpy  0x000008d9         Code  Gb  strcpy_unaligned.o [5]
+__low_level_init        0x00000dc3    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0x144  Data  Gb  msp432_startup_ewarm.o [1]
+_call_main              0x00000db5         Code  Gb  cmain.o [5]
+_exit                   0x00000dcd         Code  Gb  cexit.o [5]
+_main                   0x00000dbf         Code  Gb  cmain.o [5]
+atoi                    0x000008a7    0x8  Code  Gb  atoi.o [3]
+digits                  0x00000ab8   0x28  Data  Lc  xstoul.o [3]
+exit                    0x00000dc7    0x4  Code  Gb  exit.o [3]
+intDefaultHandler       0x00000e4d    0x2  Code  Lc  msp432_startup_ewarm.o [1]
+itoa                    0x00000183   0x50  Code  Gb  msp432p401_euscia0_uart_01.o [1]
+main                    0x00000451  0x342  Code  Gb  msp432p401_euscia0_uart_01.o [1]
+memchr                  0x00000b09         Code  Gb  memchr.o [5]
+ndigs                   0x00000ae0   0x28  Data  Lc  xstoul.o [3]
+strcat                  0x0000091d   0x1c  Code  Gb  strcat.o [3]
+strchr                  0x00000891         Code  Gb  strchr.o [5]
+strncmp                 0x000008af   0x28  Code  Gb  strncmp.o [3]
+systemStack             0x20000004  0x200  Data  Lc  msp432_startup_ewarm.o [1]
+
+
+[1] = E:\Projects\ARM\2\arm\7.50.2\TexasInstruments\MSP432\standalone_examples\msp432p401_euscia0_uart_01\Debug\Obj
+[2] = command line
+[3] = dl7M_tln.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  2 814 bytes of readonly  code memory
+    998 bytes of readonly  data memory
+    516 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

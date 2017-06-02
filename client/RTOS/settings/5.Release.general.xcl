@@ -1,0 +1,13 @@
+"E:\Programs\IAR\ARM\arm\bin\armproc.dll" 
+
+"E:\Programs\IAR\ARM\arm\bin\armsim2.dll" 
+
+"E:\Projects\ARM\5\Release\Exe\5.out" 
+
+--plugin "E:\Programs\IAR\ARM\arm\bin\armbat.dll" 
+
+--device_macro "E:\Programs\IAR\ARM\arm\config\debugger\TexasInstruments\MSP432P401R.dmac" 
+
+
+
+

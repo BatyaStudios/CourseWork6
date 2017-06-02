@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="configPkg" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/5_prm4f.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="E:/Projects/ARM/5/5.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/5_prm4f.mak" src="package.bld"/>
+        <srcFile name="package/cfg/5_prm4f.orm4f.dep" src="package/cfg/5_prm4f.c"/>
+        <srcFile name="package/cfg/5_prm4f.dep" src="package/cfg/5_prm4f.cfg"/>
+        <srcFile name="package/cfg/5.xrm4f.mak" src="package.bld"/>
+        <srcFile name="package/rel/configPkg.tar.dep" src="package/rel/configPkg.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="iar.targets.arm.M4F"
+            version="iar.targets.arm.M4F{1,0,7.50,2"
+            rawVersion="7.50.2.10312"
+            platform="ti.platforms.tiva:TM4C1294NCPDT:1"
+            isa="v7M4"
+            suffix="rm4f"
+            rootDir="E:/Programs/IAR/ARM/arm"
+            os="undefined"
+            rts="iar.targets.arm.rts">
+            <model endian="little"
+                codeModel="thumb2"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="5"
+        pname="5.prm4f"
+        target="iar.targets.arm.M4F"
+        platform="ti.platforms.msp432:MSP432P401R"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/5_prm4f.cfg"
+        xCfgPrefix="package/cfg/5_prm4f"
+        cfgScript="E:/Projects/ARM/5/5.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="5"
+        pname="5.xrm4f"
+        target="iar.targets.arm.M4F"
+        platform="ti.platforms.msp432:MSP432P401R"
+        profile="release"
+        xCfgScript="package/cfg/5_prm4f.cfg"
+        xCfgPrefix="package/cfg/5_prm4f"
+        cfgScript="E:/Projects/ARM/5/5.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="5.xrm4f"
+        args=""
+        groupName="5.xrm4f"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="configPkg"
+        pname="configPkg.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

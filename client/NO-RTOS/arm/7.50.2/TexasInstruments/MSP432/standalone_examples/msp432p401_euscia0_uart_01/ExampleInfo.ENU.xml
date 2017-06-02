@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<infocenter_data version="1.0">
+  <iar_name>msp432p401_euscia0_uart_01</iar_name>                                                                <!--App-->
+  <iar_description>eUSCI_A0 UART echo at 9600 baud using BRCLK = 12MHz</iar_description> <!--App short description-->
+  <iar_curdir>$CUR_DIR$</iar_curdir>
+</infocenter_data>

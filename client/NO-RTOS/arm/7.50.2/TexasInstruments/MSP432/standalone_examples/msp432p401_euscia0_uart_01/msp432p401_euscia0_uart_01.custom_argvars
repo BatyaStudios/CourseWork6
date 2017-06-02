@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<iarUserArgVars>
+  <group active="true" name="tirtos_msp43x_2_20_00_06"/>
+  <group active="false" name="tirtos_cc13xx_cc26xx_2_21_00_06"/>
+  <group active="false" name="CC26xx TI-RTOS"/>
+  <group active="false" name="tirtos_cc13xx_cc26xx_2_18_00_03"/>
+</iarUserArgVars>
+
+

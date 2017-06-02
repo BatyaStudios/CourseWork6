@@ -1,0 +1,15 @@
+"E:\Programs\IAR\ARM\arm\bin\armproc.dll" 
+
+"E:\Programs\IAR\ARM\arm\bin\armxds2.dll" 
+
+"E:\Projects\ARM\2\arm\7.50.2\TexasInstruments\MSP432\standalone_examples\msp432p401_euscia0_uart_01\Debug\Exe\c.out" 
+
+--plugin "E:\Programs\IAR\ARM\arm\bin\armbat.dll" 
+
+--device_macro "E:\Programs\IAR\ARM\arm\config\debugger\TexasInstruments\MSP432P401R.dmac" 
+
+--flash_loader "E:\Programs\IAR\ARM\arm\config\flashloader\TexasInstruments\FlashMSP432P401R.board" 
+
+
+
+

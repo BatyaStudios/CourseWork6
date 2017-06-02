@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<title>Index page.</title>
+	</head>
+	
+	<body bgcolor="#111">
+		<center>
+			<table width="256" border="0" cellspacing="0" cellpadding="0">
+			
+				<tr height="128"> <td> </td> </tr>
+				
+				<tr height="32" width="128"> <td background="http://i.imgur.com/1cS80zQ.png"> </td> </tr>
+				<tr height="64" width="128"> <td> <center> <font color="white"> This is index page. </font> </center> </td> </tr>
+				<tr height="32" width="128"> <td background="http://i.imgur.com/eWYwLyn.png"> </td> </tr>
+				
+				<tr height="64"> <td> </td> </tr>
+				
+				<?php
+					$conn = new mysqli('localhost', 'board', 'keyword');
+					
+					if ($conn->connect_error) {
+						echo '<tr height="32" width="128" bgcolor="#ff6666"> <td background="http://i.imgur.com/1cS80zQ.png"> </td> </tr>';
+						echo '<tr height="64" width="128" bgcolor="#ff6666"> <td> <center> <font color="white"> SQL not works. </font> </center> </td> </tr>';
+						echo '<tr height="32" width="128" bgcolor="#ff6666"> <td background="http://i.imgur.com/eWYwLyn.png"> </td> </tr>';
+					} else {
+						echo '<tr height="32" width="128" > <td background="http://i.imgur.com/1cS80zQ.png"> </td> </tr>';
+						echo '<tr height="64" width="128" > <td> <center> <font color="white"> SQL works. </font> </center> </td> </tr>';
+						echo '<tr height="32" width="128" > <td background="http://i.imgur.com/eWYwLyn.png"> </td> </tr>';
+					}
+					
+					$conn->close();
+				?>
+			</table>
+		</center>
+	</body>
+
+</html>

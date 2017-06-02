@@ -1,0 +1,144 @@
+<html>
+	<head>
+		<style>
+		.text {
+			color: #FFF;
+		}
+		
+		input.color {
+			border: 1px solid #FFF;
+			height: 32px;
+			width: 32px;
+		}
+		
+		input.color.white {
+			background: #FFF;
+		}
+		
+		input.color.yellow {
+			background: #FF0;
+		}
+		
+		input.color.green {
+			background: #0F0;
+		}
+		
+		input.color.cyan {
+			background: #0FF;
+		}
+		
+		input.color.magenta {
+			background: #F0F;
+		}
+		
+		input.color.red {
+			background: #F00;
+		}
+		
+		input.color.blue {
+			background: #00F;
+		}
+		
+		input.color.black {
+			background: #000;
+		}
+		
+		.input {
+			background: #111;
+			color: #FFF;
+			border: 1px solid #FFF;
+		}
+		
+		</style>
+		<script>
+			var ledcolor = "white";
+		
+            function toolselect() {
+				var Selector = document.getElementById("toolselector");
+				
+				switch (Selector.options[Selector.selectedIndex].value) {
+					case "echo":
+						document.getElementById('tool').innerHTML = 'Argument: <input type="text" size="32" id="argument" class="input">';
+						break;
+					case "set led":
+						document.getElementById('tool').innerHTML = '<table border="0" cellspacing="0" cellpadding="0"> <tr> <td class="text">Select color:</td> <td> ' +
+																				  '<input type="button" class="color white" onclick="ledcolor = \'white\'"> ' +
+																				  '<input type="button" class="color yellow" onclick="ledcolor = \'yellow\'"> '+
+																				  '<input type="button" class="color green" onclick="ledcolor = \'green\'"> '+
+																				  '<input type="button" class="color cyan" onclick="ledcolor = \'cyan\'"> '+
+																				  '<input type="button" class="color blue" onclick="ledcolor = \'blue\'"> '+
+																				  '<input type="button" class="color magenta" onclick="ledcolor = \'magenta\'"> '+
+																				  '<input type="button" class="color red" onclick="ledcolor = \'red\'"> '+
+																				  '<input type="button" class="color black" onclick="ledcolor = \'black\'"> </td> </tr> </table>';
+						break;
+					case "custom":
+						document.getElementById('tool').innerHTML = 'Command: <input type="text" size="32" id="command" class="input">';
+						break;
+				}
+            }
+			
+			function generaterequest() {
+				var request;
+				var Selector = document.getElementById("toolselector");
+				
+				switch (document.getElementById("toolselector").options[Selector.selectedIndex].value) {
+					case "echo":
+						request = 'http://77.37.152.65/msp/request.html?request=echo ' + document.getElementById("argument").value;
+						break;
+					case "set led":
+						request = 'http://77.37.152.65/msp/request.html?request=set led ' + ledcolor;
+						break;
+					case "custom":
+						request = 'http://77.37.152.65/msp/request.html?request=' + document.getElementById("command").value;
+						break;
+				}
+				
+				//alert(request);
+				window.location.href = request;
+			}
+        </script>
+	</head>
+	<body bgcolor="#111" onload="toolselect()">
+		<center>
+				<table width="800" border="0" cellspacing="0" cellpadding="0">
+					<tr height="96"> <td> </td> </tr>
+					<tr height="32"> <td> <a href="http://77.37.152.65/msp/panel.html"> <font color="#FFF"> Back to panel </font> </a> </td> </tr>
+					<tr height="32"> <td background="http://i.imgur.com/eWYwLyn.png"> </td> </tr>
+					<tr height="32" class="text"> <td> <center> Create request: </center> </td> </tr>
+					<tr height="64">
+						<td>
+							<table width="800" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="text" width="256">
+										<center>
+											Select command type:
+										</center>
+									</td>
+									<td width="80">  
+										<center>
+											<select onchange="toolselect()" id="toolselector" class="input">
+												<option value="echo">echo</option>
+												<option selected value="set led">set led</option>
+												<!--option value="custom">custom</option-->
+											</select>
+										</center>
+									</td>
+									<td>
+										<center> <div class="text" id="tool"> </div> </center>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr height="64">
+						<td>
+							<center>
+								<input type="button" onclick="generaterequest()" value="Send" class="input">
+							</center>
+						</td>
+					</tr>
+					<tr height="32"> <td background="http://i.imgur.com/1cS80zQ.png"> </td> </tr>
+			</table>
+		</center>
+	</body>
+</html>

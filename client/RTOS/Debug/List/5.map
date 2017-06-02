@@ -1,0 +1,2288 @@
+###############################################################################
+#
+# IAR ELF Linker V7.50.2.10312/W32 for ARM                02/Jun/2017  14:22:51
+# Copyright 2007-2015 IAR Systems AB.
+#
+#    Output file  =  E:\Projects\ARM\5\Debug\Exe\5.out
+#    Map file     =  E:\Projects\ARM\5\Debug\List\5.map
+#    Command line =  
+#        E:\Projects\ARM\5\Debug\Obj\MSP_EXP432P401R.o
+#        E:\Projects\ARM\5\Debug\Obj\uartecho.o -o
+#        E:\Projects\ARM\5\Debug\Exe\5.out --map
+#        E:\Projects\ARM\5\Debug\List\5.map --log
+#        libraries,initialization,redirects,veneers --log_file
+#        E:\Projects\ARM\5\Debug\List\5.log --config
+#        E:\Projects\ARM\5/5_MSP_EXP432P401R.icf -f
+#        E:\Projects\ARM\5/configPkg/linker.cmd
+#        (E:\Projects\ARM\5\configPkg\package\cfg\5_prm4f.orm4f
+#        C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/mw/wifi/cc3x00/lib/cc3x00_host_driver.arm4f
+#        C:\ti\tirtos_msp43x_2_20_00_06\products\uia_2_00_06_52\packages\ti\uia\sysbios\lib\release\ti.uia.sysbios.arm4f
+#        C:\ti\tirtos_msp43x_2_20_00_06\products\uia_2_00_06_52\packages\ti\uia\loggers\lib\release\ti.uia.loggers.arm4f
+#        C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/lib/drivers_MSP432P401R.arm4f
+#        C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/lib/drivers_wifi_MSP432P401R.arm4f
+#        C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/lib/power_tirtos_MSP432P401R.arm4f
+#        C:\ti\tirtos_msp43x_2_20_00_06\products\tidrivers_msp43x_2_20_00_08\packages\ti\mw\fatfs\lib\release\ti.mw.fatfs.arm4f
+#        C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/ports/lib/tirtosport.arm4f
+#        E:\Projects\ARM\5\src\sysbios\sysbios.arm4f
+#        C:\ti\tirtos_msp43x_2_20_00_06\products\uia_2_00_06_52\packages\ti\uia\services\lib\release\ti.uia.services.arm4f
+#        C:\ti\tirtos_msp43x_2_20_00_06\products\uia_2_00_06_52\packages\ti\uia\runtime\lib\release\ti.uia.runtime.arm4f
+#        C:\ti\tirtos_msp43x_2_20_00_06\products\uia_2_00_06_52\packages\ti\uia\events\lib\release\ti.uia.events.arm4f
+#        C:\ti\tirtos_msp43x_2_20_00_06\products\bios_6_46_00_23\packages\iar\targets\arm\rts\lib\release\iar.targets.arm.rts.arm4f
+#        C:\ti\tirtos_msp43x_2_20_00_06\products\bios_6_46_00_23\packages\iar\targets\arm\rts\lib\release\boot.arm4f
+#        --entry __iar_program_start --keep __vector_table --define_symbol
+#        ti_sysbios_family_arm_m3_Hwi_nvic=0xe000e000 --define_symbol
+#        xdc_runtime_Startup__EXECFXN__C=1 --define_symbol
+#        xdc_runtime_Startup__RESETFXN__C=1 --keep __ASM__ --keep __PLAT__
+#        --keep __ISA__ --keep __TARG__ --keep __TRDR__)
+#        c:/ti/tirtos_msp43x_2_20_00_06/products/msp432_driverlib_3_21_00_05/driverlib/MSP432P4xx/ewarm/msp432p4xx_driverlib.a
+#        --silent --cpu=Cortex-M4F --entry=__iar_program_start --redirect
+#        _Printf=_PrintfSmall --redirect _Scanf=_ScanfSmall --entry
+#        __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor                     = *
+__CPP_Language                = EC++
+__SystemLibrary               = DLib
+__dlib_dynamic_initialization = normal
+
+
+*******************************************************************************
+*** RESERVED RANGES
+***
+
+Ranges reserved by absolute symbols:
+   [0x20000000-0x2000013f]
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x0003ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x2000ffff] { rw, block CSTACK, block HEAP };
+
+  Section                 Kind        Address    Size  Object
+  -------                 ----        -------    ----  ------
+"A1":                                            0x3c
+  .intvec                 const    0x00000000    0x3c  5_prm4f.orm4f [2]
+                                 - 0x0000003c    0x3c
+
+"P1":                                          0xc081
+  .text                   ro code  0x0000003c  0x38ac  BIOS.o [13]
+  .text                   ro code  0x000038e8   0xb14  5_prm4f.orm4f [2]
+  .text                   ro code  0x000043fc    0x4c  Assert.orm4f [8]
+  CODE                    ro code  0x00004448    0x78  m3_Hwi_asm_switch_iar.obj [13]
+  .text                   ro code  0x000044c0   0x208  Error.orm4f [8]
+  .text                   ro code  0x000046c8    0xe4  Memory.orm4f [8]
+  .text                   ro code  0x000047ac    0x66  ABImemset.o [12]
+  .text                   ro code  0x00004812    0x76  lz77_init_single.o [12]
+  CODE                    ro code  0x00004888    0xb4  m3_TaskSupport_asm_iar.obj [13]
+  .text                   ro code  0x0000493c     0xc  Timestamp.orm4f [8]
+  .text                   ro code  0x00004948   0x14c  Startup.orm4f [8]
+  .text                   ro code  0x00004a94   0x298  Text.orm4f [8]
+  .text                   ro code  0x00004d2c   0xb38  System.orm4f [8]
+  .text                   ro code  0x00005864   0x534  uartecho.o [1]
+  .text                   ro code  0x00005d98   0x298  LoggerStopMode.orm4f [15]
+  .text                   ro code  0x00006030    0x76  ABImemcpy_unaligned.o [12]
+  .text                   ro code  0x000060a6     0xa  xsprout.o [5]
+  .text                   ro code  0x000060b0   0x10c  SysMin.orm4f [8]
+  .text                   ro code  0x000061bc    0x30  Core-label.orm4f [8]
+  .text                   ro code  0x000061ec    0x48  Core-params.orm4f [8]
+  .text                   ro code  0x00006234    0xc0  Core-smem.orm4f [8]
+  .text                   ro code  0x000062f4   0x15e  Core-mem.orm4f [8]
+  .const_ti_sysbios_family_arm_m3_Hwi_Module__id__C
+                          const    0x00006452     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x00006454     0x6  ABImemclr4.o [12]
+  .const_ti_sysbios_family_arm_m3_Hwi_Module__loggerDefined__C
+                          const    0x0000645a     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x0000645c    0x18  Gate.orm4f [8]
+  .text                   ro code  0x00006474     0x6  ABImemclr.o [12]
+  .const_ti_sysbios_family_arm_m3_Timer_Module__id__C
+                          const    0x0000647a     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x0000647c    0x36  strlen.o [12]
+  .const_ti_sysbios_family_arm_m3_TimestampProvider_configTimer__C
+                          const    0x000064b2     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x000064b4    0x3c  Registry.orm4f [8]
+  .text                   ro code  0x000064f0     0x6  abort.o [5]
+  .text                   ro code  0x000064f6     0x4  exit.o [5]
+  .const_ti_sysbios_gates_GateMutex_Module__id__C
+                          const    0x000064fa     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x000064fc    0x42  strcmp_unaligned.o [12]
+  .const_ti_sysbios_hal_Hwi_Module__id__C
+                          const    0x0000653e     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x00006540   0x268  GPIOMSP432.orm4f [6]
+  .text                   ro code  0x000067a8    0xa4  UART.orm4f [6]
+  .text                   ro code  0x0000684c    0x16  strchr.o [12]
+  .text                   ro code  0x00006862     0x8  atoi.o [5]
+  .const_ti_sysbios_heaps_HeapMem_Module__id__C
+                          const    0x0000686a     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x0000686c    0x6c  strncpy_unaligned.o [12]
+  .text                   ro code  0x000068d8    0x34  sprintf.o [5]
+  .text                   ro code  0x0000690c    0x2c  MSP_EXP432P401R.o [1]
+  .text                   ro code  0x00006938    0x84  QueueDescriptor.orm4f [16]
+  .text                   ro code  0x000069bc    0x3a  ABImemset48.o [12]
+  .const_ti_sysbios_knl_Clock_Module__id__C
+                          const    0x000069f6     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x000069f8     0xc  XXexit.o [12]
+  .text                   ro code  0x00006a04     0xa  cexit.o [12]
+  .const_ti_sysbios_knl_Clock_Module__loggerDefined__C
+                          const    0x00006a0e     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x00006a10   0x1bc  gpio.o [10]
+  .text                   ro code  0x00006bcc    0x8a  HwiP_tirtos.orm4f [17]
+  .const_ti_sysbios_knl_Semaphore_Module__id__C
+                          const    0x00006c56     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x00006c58   0x19c  xstoul.o [5]
+  .text                   ro code  0x00006df4   0x4d8  xprintfsmall.o [5]
+  .text                   ro code  0x000072cc   0x4fc  PowerMSP432.orm4f [6]
+  .text                   ro code  0x000077c8    0x58  memchr.o [12]
+  .text                   ro code  0x00007820     0xc  errno.o [5]
+  .text                   ro code  0x0000782c   0x428  pcm.o [10]
+  .text                   ro code  0x00007c54    0x4c  List.orm4f [6]
+  .text                   ro code  0x00007ca0    0x3c  rtc_c.o [10]
+  .text                   ro code  0x00007cdc    0x24  wdt_a.o [10]
+  .text                   ro code  0x00007d00    0xf8  cs.o [10]
+  .text                   ro code  0x00007df8    0x9c  flash.o [10]
+  .text                   ro code  0x00007e94    0x6e  PowerMSP432_tirtos.orm4f [11]
+  .text                   ro code  0x00007f02     0x2  xtls.o [5]
+  .text                   ro code  0x00007f04    0x14  cpu.o [10]
+  .const_xdc_runtime_Text_charTab__A
+                          const    0x00007f18  0x1f60  5_prm4f.orm4f [2]
+  .text                   ro code  0x00009e78   0xaec  UARTMSP432.orm4f [6]
+  .text                   ro code  0x0000a964   0x128  uart.o [10]
+  .text                   ro code  0x0000aa8c    0xaa  SemaphoreP_tirtos.orm4f [17]
+  .text                   ro code  0x0000ab36    0xc4  RingBuf.orm4f [6]
+  .const_ti_sysbios_knl_Semaphore_Module__loggerDefined__C
+                          const    0x0000abfa     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x0000abfc    0x96  ClockP_tirtos.orm4f [17]
+  .const_ti_sysbios_knl_Swi_Module__id__C
+                          const    0x0000ac92     0x2  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000ac94   0x370  BIOS.o [13]
+  CODE                    ro code  0x0000b004   0x13c  m3_Hwi_asm_iar.obj [13]
+  .const_xdc_runtime_Text_nodeTab__A
+                          const    0x0000b140    0xfc  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000b23c    0x78  uartecho.o [1]
+  .rodata                 const    0x0000b2b4    0x70  MSP_EXP432P401R.o [1]
+  .const_ti_uia_loggers_LoggerStopMode_Module__FXNS__C
+                          const    0x0000b324    0x60  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000b384    0x5c  uartecho.o [1]
+  .rodata                 const    0x0000b3e0    0x48  MSP_EXP432P401R.o [1]
+  .rodata                 const    0x0000b428    0x48  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000b470    0x44  uartecho.o [1]
+  .text                   ro code  0x0000b4b4    0x40  zero_init3.o [12]
+  .const_ti_sysbios_knl_Task_Object__PARAMS__C
+                          const    0x0000b4f4    0x3c  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000b530    0x3c  uartecho.o [1]
+  .const_ti_sysbios_family_arm_m3_Hwi_Object__PARAMS__C
+                          const    0x0000b56c    0x30  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Startup_sfxnTab__A
+                          const    0x0000b59c    0x2c  5_prm4f.orm4f [2]
+  .text                   ro code  0x0000b5c8    0x2a  cstartup_M.orm4f [4]
+  .const_ti_sysbios_knl_Swi_Module__loggerDefined__C
+                          const    0x0000b5f2     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x0000b5f4    0x20  iar_xdc_init.orm4f [4]
+  .text                   ro code  0x0000b614    0x1a  cmain.orm4f [4]
+  .text                   ro code  0x0000b62e     0x4  low_level_init.o [5]
+  .const_ti_sysbios_knl_Task_Module__id__C
+                          const    0x0000b632     0x2  5_prm4f.orm4f [2]
+  .text                   ro code  0x0000b634    0x28  data_init.o [12]
+  .const_ti_sysbios_heaps_HeapMem_Module__FXNS__C
+                          const    0x0000b65c    0x28  5_prm4f.orm4f [2]
+  .const_ti_uia_loggers_LoggerStopMode_Object__PARAMS__C
+                          const    0x0000b684    0x28  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000b6ac    0x28  uartecho.o [1]
+  .rodata                 const    0x0000b6d4    0x28  UARTMSP432.orm4f [6]
+  .const_ti_sysbios_gates_GateHwi_Module__FXNS__C
+                          const    0x0000b6fc    0x24  5_prm4f.orm4f [2]
+  .const_ti_sysbios_gates_GateMutex_Module__FXNS__C
+                          const    0x0000b720    0x24  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_Object__PARAMS__C
+                          const    0x0000b744    0x24  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_Object__PARAMS__C
+                          const    0x0000b768    0x24  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_Object__PARAMS__C
+                          const    0x0000b78c    0x24  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000b7b0    0x24  MSP_EXP432P401R.o [1]
+  .text                   ro code  0x0000b7d4    0x22  fpinit_M.o [9]
+  .iar.init_table         const    0x0000b7f8    0x24  - Linker created -
+  .const_ti_sysbios_knl_Task_Module__loggerDefined__C
+                          const    0x0000b81c     0x2  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_Object__DESC__C
+                          const    0x0000b820    0x20  5_prm4f.orm4f [2]
+  .const_ti_sysbios_gates_GateHwi_Object__DESC__C
+                          const    0x0000b840    0x20  5_prm4f.orm4f [2]
+  .const_ti_sysbios_gates_GateMutex_Object__DESC__C
+                          const    0x0000b860    0x20  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_Object__DESC__C
+                          const    0x0000b880    0x20  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_Object__DESC__C
+                          const    0x0000b8a0    0x20  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Queue_Object__DESC__C
+                          const    0x0000b8c0    0x20  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_Object__DESC__C
+                          const    0x0000b8e0    0x20  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_Object__DESC__C
+                          const    0x0000b900    0x20  5_prm4f.orm4f [2]
+  .const_ti_uia_loggers_LoggerStopMode_Object__DESC__C
+                          const    0x0000b920    0x20  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000b940    0x20  uartecho.o [1]
+  .text                   ro code  0x0000b960    0x20  cmain_call_ctors.o [12]
+  .text                   ro code  0x0000b980    0x18  cppinit.o [5]
+  .rodata                 const    0x0000b998    0x1c  uartecho.o [1]
+  .rodata                 const    0x0000b9b4    0x1c  uartecho.o [1]
+  .const_ti_sysbios_gates_GateHwi_Object__PARAMS__C
+                          const    0x0000b9d0    0x18  5_prm4f.orm4f [2]
+  .const_ti_sysbios_gates_GateMutex_Object__PARAMS__C
+                          const    0x0000b9e8    0x18  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Queue_Object__PARAMS__C
+                          const    0x0000ba00    0x18  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Startup_sfxnRts__A
+                          const    0x0000ba18    0x18  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000ba30    0x18  uartecho.o [1]
+  .text                   ro code  0x0000ba48    0x18  xdc_init.orm4f [8]
+  CODE                    ro code  0x0000ba60    0x16  boot.orm4f [4]
+  .const_ti_sysbios_utils_Load_Module__id__C
+                          const    0x0000ba76     0x2  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000ba78    0x14  MSP_EXP432P401R.o [1]
+  .rodata                 const    0x0000ba8c    0x14  uartecho.o [1]
+  .const_xdc_runtime_Startup_firstFxns__A
+                          const    0x0000baa0    0x10  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000bab0    0x10  MSP_EXP432P401R.o [1]
+  .rodata                 const    0x0000bac0    0x10  uartecho.o [1]
+  .rodata                 const    0x0000bad0    0x10  uartecho.o [1]
+  .rodata                 const    0x0000bae0    0x10  uartecho.o [1]
+  .const_ti_sysbios_knl_Idle_funcList__A
+                          const    0x0000baf0     0xc  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000bafc     0xc  uartecho.o [1]
+  .rodata                 const    0x0000bb08     0xc  uartecho.o [1]
+  .rodata                 const    0x0000bb14     0xc  uartecho.o [1]
+  .rodata                 const    0x0000bb20     0xc  uartecho.o [1]
+  .rodata                 const    0x0000bb2c     0xc  uartecho.o [1]
+  .const_ti_sysbios_family_arm_m3_Hwi_excHookFuncs__A
+                          const    0x0000bb38     0x8  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Idle_funcList__C
+                          const    0x0000bb40     0x8  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Startup_firstFxns__C
+                          const    0x0000bb48     0x8  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Startup_lastFxns__C
+                          const    0x0000bb50     0x8  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000bb58     0x8  uartecho.o [1]
+  .rodata                 const    0x0000bb60     0x8  uartecho.o [1]
+  .rodata                 const    0x0000bb68     0x8  uartecho.o [1]
+  .rodata                 const    0x0000bb70     0x8  uartecho.o [1]
+  .rodata                 const    0x0000bb78     0x8  uartecho.o [1]
+  .rodata                 const    0x0000bb80     0x8  uartecho.o [1]
+  .rodata                 const    0x0000bb88     0x8  uartecho.o [1]
+  .rodata                 const    0x0000bb90     0x8  uartecho.o [1]
+  .const_ti_sysbios_family_arm_m3_Hwi_E_NMI__C
+                          const    0x0000bb98     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_E_alreadyDefined__C
+                          const    0x0000bb9c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_E_busFault__C
+                          const    0x0000bba0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_E_debugMon__C
+                          const    0x0000bba4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_E_hardFault__C
+                          const    0x0000bba8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_E_memFault__C
+                          const    0x0000bbac     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_E_noIsr__C
+                          const    0x0000bbb0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_E_reserved__C
+                          const    0x0000bbb4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_E_svCall__C
+                          const    0x0000bbb8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_E_usageFault__C
+                          const    0x0000bbbc     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_LD_end__C
+                          const    0x0000bbc0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_LM_begin__C
+                          const    0x0000bbc4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_Module__diagsEnabled__C
+                          const    0x0000bbc8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_Module__diagsIncluded__C
+                          const    0x0000bbcc     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_Module__diagsMask__C
+                          const    0x0000bbd0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_Module__loggerFxn1__C
+                          const    0x0000bbd4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_Module__loggerFxn8__C
+                          const    0x0000bbd8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_Module__loggerObj__C
+                          const    0x0000bbdc     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_NUM_INTERRUPTS__C
+                          const    0x0000bbe0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_Object__count__C
+                          const    0x0000bbe4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_ccr__C
+                          const    0x0000bbe8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_excHandlerFunc__C
+                          const    0x0000bbec     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_excHookFuncs__C
+                          const    0x0000bbf0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_nullIsrFunc__C
+                          const    0x0000bbf4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Hwi_priGroup__C
+                          const    0x0000bbf8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_TaskSupport_stackAlignment__C
+                          const    0x0000bbfc     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Timer_E_cannotSupport__C
+                          const    0x0000bc00     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_m3_Timer_startupNeeded__C
+                          const    0x0000bc04     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_msp432_Timer_numTimerDevices__C
+                          const    0x0000bc08     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_family_arm_msp432_Timer_startupNeeded__C
+                          const    0x0000bc0c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_gates_GateMutex_A_badContext__C
+                          const    0x0000bc10     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_gates_GateMutex_Instance_State_sem__O
+                          const    0x0000bc14     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_gates_GateMutex_Module__diagsEnabled__C
+                          const    0x0000bc18     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_gates_GateMutex_Module__diagsIncluded__C
+                          const    0x0000bc1c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_gates_GateMutex_Module__diagsMask__C
+                          const    0x0000bc20     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_hal_Hwi_E_stackOverflow__C
+                          const    0x0000bc24     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_A_align__C
+                          const    0x0000bc28     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_A_heapSize__C
+                          const    0x0000bc2c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_A_invalidFree__C
+                          const    0x0000bc30     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_A_zeroBlock__C
+                          const    0x0000bc34     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_E_memory__C
+                          const    0x0000bc38     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_Module__diagsEnabled__C
+                          const    0x0000bc3c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_Module__diagsIncluded__C
+                          const    0x0000bc40     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_Module__diagsMask__C
+                          const    0x0000bc44     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_Module__gateObj__C
+                          const    0x0000bc48     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_Object__count__C
+                          const    0x0000bc4c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_heaps_HeapMem_reqAlign__C
+                          const    0x0000bc50     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_A_badThreadType__C
+                          const    0x0000bc54     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_LM_begin__C
+                          const    0x0000bc58     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_LM_tick__C
+                          const    0x0000bc5c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_LW_delayed__C
+                          const    0x0000bc60     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_Module_State_clockQ__O
+                          const    0x0000bc64     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_Module__diagsEnabled__C
+                          const    0x0000bc68     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_Module__diagsIncluded__C
+                          const    0x0000bc6c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_Module__diagsMask__C
+                          const    0x0000bc70     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_Module__loggerFxn1__C
+                          const    0x0000bc74     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_Module__loggerFxn2__C
+                          const    0x0000bc78     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Clock_Module__loggerObj__C
+                          const    0x0000bc7c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_A_badContext__C
+                          const    0x0000bc80     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_A_noEvents__C
+                          const    0x0000bc84     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_A_overflow__C
+                          const    0x0000bc88     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_A_pendTaskDisabled__C
+                          const    0x0000bc8c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_Instance_State_pendQ__O
+                          const    0x0000bc90     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_LM_pend__C
+                          const    0x0000bc94     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_LM_post__C
+                          const    0x0000bc98     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_Module__diagsEnabled__C
+                          const    0x0000bc9c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_Module__diagsIncluded__C
+                          const    0x0000bca0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_Module__diagsMask__C
+                          const    0x0000bca4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_Module__loggerFxn2__C
+                          const    0x0000bca8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_Module__loggerFxn4__C
+                          const    0x0000bcac     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Semaphore_Module__loggerObj__C
+                          const    0x0000bcb0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Swi_LD_end__C
+                          const    0x0000bcb4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Swi_LM_begin__C
+                          const    0x0000bcb8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Swi_LM_post__C
+                          const    0x0000bcbc     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Swi_Module__diagsEnabled__C
+                          const    0x0000bcc0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Swi_Module__diagsIncluded__C
+                          const    0x0000bcc4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Swi_Module__diagsMask__C
+                          const    0x0000bcc8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Swi_Module__loggerFxn1__C
+                          const    0x0000bccc     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Swi_Module__loggerFxn4__C
+                          const    0x0000bcd0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Swi_Module__loggerObj__C
+                          const    0x0000bcd4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Swi_Object__count__C
+                          const    0x0000bcd8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_A_badPriority__C
+                          const    0x0000bcdc     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_A_badTaskState__C
+                          const    0x0000bce0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_A_badThreadType__C
+                          const    0x0000bce4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_A_noPendElem__C
+                          const    0x0000bce8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_E_spOutOfBounds__C
+                          const    0x0000bcec     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_E_stackOverflow__C
+                          const    0x0000bcf0     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_LD_block__C
+                          const    0x0000bcf4     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_LD_exit__C
+                          const    0x0000bcf8     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_LD_ready__C
+                          const    0x0000bcfc     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_LM_switch__C
+                          const    0x0000bd00     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_Module_State_inactiveQ__O
+                          const    0x0000bd04     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_Module__diagsEnabled__C
+                          const    0x0000bd08     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_Module__diagsIncluded__C
+                          const    0x0000bd0c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_Module__diagsMask__C
+                          const    0x0000bd10     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_Module__loggerFxn2__C
+                          const    0x0000bd14     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_Module__loggerFxn4__C
+                          const    0x0000bd18     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_Module__loggerObj__C
+                          const    0x0000bd1c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_Object__count__C
+                          const    0x0000bd20     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_allBlockedFunc__C
+                          const    0x0000bd24     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_defaultStackHeap__C
+                          const    0x0000bd28     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_defaultStackSize__C
+                          const    0x0000bd2c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_knl_Task_numConstructedTasks__C
+                          const    0x0000bd30     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_utils_Load_LS_cpuLoad__C
+                          const    0x0000bd34     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_utils_Load_Module__diagsEnabled__C
+                          const    0x0000bd38     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_utils_Load_Module__diagsIncluded__C
+                          const    0x0000bd3c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_utils_Load_Module__diagsMask__C
+                          const    0x0000bd40     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_utils_Load_Module__loggerFxn1__C
+                          const    0x0000bd44     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_utils_Load_Module__loggerObj__C
+                          const    0x0000bd48     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_utils_Load_postUpdate__C
+                          const    0x0000bd4c     0x4  5_prm4f.orm4f [2]
+  .const_ti_sysbios_utils_Load_windowInMs__C
+                          const    0x0000bd50     0x4  5_prm4f.orm4f [2]
+  .const_ti_uia_loggers_LoggerStopMode_Module__diagsEnabled__C
+                          const    0x0000bd54     0x4  5_prm4f.orm4f [2]
+  .const_ti_uia_loggers_LoggerStopMode_Module__diagsIncluded__C
+                          const    0x0000bd58     0x4  5_prm4f.orm4f [2]
+  .const_ti_uia_loggers_LoggerStopMode_Module__diagsMask__C
+                          const    0x0000bd5c     0x4  5_prm4f.orm4f [2]
+  .const_ti_uia_loggers_LoggerStopMode_Object__count__C
+                          const    0x0000bd60     0x4  5_prm4f.orm4f [2]
+  .const_ti_uia_runtime_ILoggerSnapshot_Interface__BASE__C
+                          const    0x0000bd64     0x4  5_prm4f.orm4f [2]
+  .const_ti_uia_runtime_IUIATransfer_Interface__BASE__C
+                          const    0x0000bd68     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Assert_E_assertFailed__C
+                          const    0x0000bd6c     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Core_A_initializedParams__C
+                          const    0x0000bd70     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Core_Module__diagsEnabled__C
+                          const    0x0000bd74     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Core_Module__diagsIncluded__C
+                          const    0x0000bd78     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Core_Module__diagsMask__C
+                          const    0x0000bd7c     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Error_E_memory__C
+                          const    0x0000bd80     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Error_Module__diagsEnabled__C
+                          const    0x0000bd84     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Error_Module__diagsIncluded__C
+                          const    0x0000bd88     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Error_Module__diagsMask__C
+                          const    0x0000bd8c     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Error_Module__loggerFxn8__C
+                          const    0x0000bd90     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Error_Module__loggerObj__C
+                          const    0x0000bd94     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Error_policyFxn__C
+                          const    0x0000bd98     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Error_raiseHook__C
+                          const    0x0000bd9c     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_IFilterLogger_Interface__BASE__C
+                          const    0x0000bda0     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_IGateProvider_Interface__BASE__C
+                          const    0x0000bda4     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_IHeap_Interface__BASE__C
+                          const    0x0000bda8     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_ILogger_Interface__BASE__C
+                          const    0x0000bdac     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_IModule_Interface__BASE__C
+                          const    0x0000bdb0     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Log_L_error__C
+                          const    0x0000bdb4     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Memory_defaultHeapInstance__C
+                          const    0x0000bdb8     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Startup_execImpl__C
+                          const    0x0000bdbc     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Startup_lastFxns__A
+                          const    0x0000bdc0     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Startup_maxPasses__C
+                          const    0x0000bdc4     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Startup_sfxnRts__C
+                          const    0x0000bdc8     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Startup_sfxnTab__C
+                          const    0x0000bdcc     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_SysMin_bufSize__C
+                          const    0x0000bdd0     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_SysMin_outputFunc__C
+                          const    0x0000bdd4     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_System_Module__gateObj__C
+                          const    0x0000bdd8     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_System_abortFxn__C
+                          const    0x0000bddc     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_System_exitFxn__C
+                          const    0x0000bde0     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_System_extendFxn__C
+                          const    0x0000bde4     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_System_maxAtexitHandlers__C
+                          const    0x0000bde8     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Text_charTab__C
+                          const    0x0000bdec     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Text_nameEmpty__C
+                          const    0x0000bdf0     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Text_nameStatic__C
+                          const    0x0000bdf4     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Text_nameUnknown__C
+                          const    0x0000bdf8     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Text_nodeTab__C
+                          const    0x0000bdfc     0x4  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Text_visitRopeFxn__C
+                          const    0x0000be00     0x4  5_prm4f.orm4f [2]
+  SHT$$PREINIT_ARRAY               0x0000be04     0x0  <Block>
+  SHT$$INIT_ARRAY                  0x0000be04     0x4  <Block>
+    .init_array           const    0x0000be04     0x4  xdc_init.orm4f [8]
+  .const_ti_sysbios_utils_Load_Module__loggerDefined__C
+                          const    0x0000be08     0x2  5_prm4f.orm4f [2]
+  .const_ti_sysbios_utils_Load_updateInIdle__C
+                          const    0x0000be0a     0x2  5_prm4f.orm4f [2]
+  .const_ti_uia_loggers_LoggerStopMode_Module__id__C
+                          const    0x0000be0c     0x2  5_prm4f.orm4f [2]
+  .const_ti_uia_loggers_LoggerStopMode_isTimestampEnabled__C
+                          const    0x0000be0e     0x2  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Core_Module__id__C
+                          const    0x0000be10     0x2  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Error_Module__loggerDefined__C
+                          const    0x0000be12     0x2  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Error_maxDepth__C
+                          const    0x0000be14     0x2  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Memory_Module__id__C
+                          const    0x0000be16     0x2  5_prm4f.orm4f [2]
+  .const_xdc_runtime_SysMin_flushAtExit__C
+                          const    0x0000be18     0x2  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Text_charCnt__C
+                          const    0x0000be1a     0x2  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Text_isLoaded__C
+                          const    0x0000be1c     0x2  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Text_registryModsLastId__C
+                          const    0x0000be1e     0x2  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Text_unnamedModsLastId__C
+                          const    0x0000be20     0x2  5_prm4f.orm4f [2]
+  .const_xdc_runtime_Error_policy__C
+                          const    0x0000be22     0x1  5_prm4f.orm4f [2]
+  .rodata                 const    0x0000be23     0x0  zero_init3.o [12]
+  .rodata                 const    0x0000be23     0x0  lz77_init_single.o [12]
+  Initializer bytes       const    0x0000be23   0x29a  <for P2-1>
+                                 - 0x0000c0bd  0xc081
+
+"P2", part 1 of 3:                              0x688
+  P2-1                             0x20000140   0x688  <Init block>
+    .data                 inited   0x20000140    0x18  MSP_EXP432P401R.o [1]
+    .data                 inited   0x20000158     0x8  5_prm4f.orm4f [2]
+    .data                 inited   0x20000160    0x30  5_prm4f.orm4f [2]
+    .data                 inited   0x20000190    0x30  5_prm4f.orm4f [2]
+    .data                 inited   0x200001c0    0x4c  5_prm4f.orm4f [2]
+    .data                 inited   0x2000020c    0x20  5_prm4f.orm4f [2]
+    .data                 inited   0x2000022c    0x10  5_prm4f.orm4f [2]
+    .data                 inited   0x2000023c     0x8  5_prm4f.orm4f [2]
+    .data                 inited   0x20000244     0x4  5_prm4f.orm4f [2]
+    .data                 inited   0x20000248     0x8  5_prm4f.orm4f [2]
+    .data                 inited   0x20000250    0x38  5_prm4f.orm4f [2]
+    .data                 inited   0x20000288     0x8  5_prm4f.orm4f [2]
+    .data                 inited   0x20000290    0x18  5_prm4f.orm4f [2]
+    .data                 inited   0x200002a8     0x8  5_prm4f.orm4f [2]
+    .data                 inited   0x200002b0     0x8  5_prm4f.orm4f [2]
+    .data                 inited   0x200002b8     0x8  5_prm4f.orm4f [2]
+    .data                 inited   0x200002c0    0x30  5_prm4f.orm4f [2]
+    .data                 inited   0x200002f0    0x80  5_prm4f.orm4f [2]
+    .data                 inited   0x20000370     0xc  5_prm4f.orm4f [2]
+    .data                 inited   0x2000037c    0x4c  5_prm4f.orm4f [2]
+    .data                 inited   0x200003c8    0x80  5_prm4f.orm4f [2]
+    .data                 inited   0x20000448     0x4  5_prm4f.orm4f [2]
+    .data                 inited   0x2000044c     0x8  5_prm4f.orm4f [2]
+    .data                 inited   0x20000454    0x9c  5_prm4f.orm4f [2]
+    .data                 inited   0x200004f0    0x30  gpio.o [10]
+    .data                 inited   0x20000520    0xc4  PowerMSP432.orm4f [6]
+    .data                 inited   0x200005e4     0x4  UART.orm4f [6]
+    .data_ti_sysbios_BIOS_Module__state__V
+                          inited   0x200005e8    0x24  5_prm4f.orm4f [2]
+    .data_ti_sysbios_family_arm_m3_Hwi_Module__state__V
+                          inited   0x2000060c    0x34  5_prm4f.orm4f [2]
+    .data_ti_sysbios_family_arm_m3_Timer_Module__state__V
+                          inited   0x20000640     0xc  5_prm4f.orm4f [2]
+    .data_ti_sysbios_family_arm_m3_TimestampProvider_Module__state__V
+                          inited   0x2000064c     0x4  5_prm4f.orm4f [2]
+    .data_ti_sysbios_family_arm_msp432_ClockFreqs_Module__state__V
+                          inited   0x20000650     0xc  5_prm4f.orm4f [2]
+    .data_ti_sysbios_family_arm_msp432_Timer_Module__state__V
+                          inited   0x2000065c     0xc  5_prm4f.orm4f [2]
+    .data_ti_sysbios_knl_Clock_Module__state__V
+                          inited   0x20000668    0x2c  5_prm4f.orm4f [2]
+    .data_ti_sysbios_knl_Swi_Module__state__V
+                          inited   0x20000694    0x1c  5_prm4f.orm4f [2]
+    .data_ti_sysbios_knl_Task_Module__state__V
+                          inited   0x200006b0    0x44  5_prm4f.orm4f [2]
+    .data_ti_sysbios_utils_Load_Module__state__V
+                          inited   0x200006f4    0x98  5_prm4f.orm4f [2]
+    .data_ti_uia_runtime_QueueDescriptor_Module__state__V
+                          inited   0x2000078c     0xc  5_prm4f.orm4f [2]
+    .data_xdc_runtime_Error_Module__state__V
+                          inited   0x20000798     0x4  5_prm4f.orm4f [2]
+    .data_xdc_runtime_Memory_Module__state__V
+                          inited   0x2000079c     0x4  5_prm4f.orm4f [2]
+    .data_xdc_runtime_Registry_Module__state__V
+                          inited   0x200007a0     0x8  5_prm4f.orm4f [2]
+    .data_xdc_runtime_Startup_Module__state__V
+                          inited   0x200007a8     0x8  5_prm4f.orm4f [2]
+    .data_xdc_runtime_SysMin_Module__state__V
+                          inited   0x200007b0     0xc  5_prm4f.orm4f [2]
+    .data_xdc_runtime_System_Module__state__V
+                          inited   0x200007bc     0x8  5_prm4f.orm4f [2]
+    __DLIB_PERTHREAD      inited   0x200007c4     0x4  errno.o [5]
+                                 - 0x200007c8   0x688
+
+"P2", part 2 of 3:                             0x1000
+  CSTACK                           0x200007c8  0x1000  <Block>
+    CSTACK                uninit   0x200007c8  0x1000  <Block tail>
+                                 - 0x200017c8  0x1000
+
+"P2", part 3 of 3:                             0x15c8
+  .bss                    zero     0x200017c8   0x400  5_prm4f.orm4f [2]
+  .bss                    zero     0x20001c00   0x400  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002000   0x300  uartecho.o [1]
+  .bss                    zero     0x20002300   0x200  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002500   0x200  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002700   0x140  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002840   0x100  MSP_EXP432P401R.o [1]
+  .bss                    zero     0x20002980   0x100  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002a80    0x80  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002b00    0x50  uartecho.o [1]
+  .bss                    zero     0x20002b50    0x40  MSP_EXP432P401R.o [1]
+  .bss                    zero     0x20002c00    0x30  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002c80    0x30  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002d00    0x30  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002d30    0x30  GPIOMSP432.orm4f [6]
+  .bss                    zero     0x20002d60     0x8  MSP_EXP432P401R.o [1]
+  .bss                    zero     0x20002d68     0x8  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002d70     0x8  QueueDescriptor.orm4f [16]
+  .bss                    zero     0x20002d78     0x4  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002d7c     0x4  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002d80     0x4  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002d84     0x4  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002d88     0x4  xdc_init.orm4f [8]
+  .bss                    zero     0x20002d8c     0x2  5_prm4f.orm4f [2]
+  .bss                    zero     0x20002d8e     0x1  GPIOMSP432.orm4f [6]
+                                 - 0x20002d8f  0x15c7
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x15c7:
+          0x200017c8  0x15c7
+
+Copy/lz77 (__iar_lz77_init_single3)
+    1 source range, total size 0x29a (39% of destination):
+          0x0000be23   0x29a
+    1 destination range, total size 0x688:
+          0x20000140   0x688
+
+Extra (__iar_cstart_call_ctors)
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                      ro code  ro data  rw data
+    ------                      -------  -------  -------
+E:\Projects\ARM\5\Debug\Obj: [1]
+    MSP_EXP432P401R.o                44      265      352
+    uartecho.o                    1 332      684      848
+    -----------------------------------------------------
+    Total:                        1 376      949    1 200
+
+E:\Projects\ARM\5\configPkg\package\cfg: [2]
+    5_prm4f.orm4f                 2 836   10 604    5 342
+    -----------------------------------------------------
+    Total:                        2 836   10 604    5 342
+
+command line: [3]
+    -----------------------------------------------------
+    Total:
+
+boot.arm4f: [4]
+    boot.orm4f                       22
+    cmain.orm4f                      26
+    cstartup_M.orm4f                 42
+    iar_xdc_init.orm4f               32
+    -----------------------------------------------------
+    Total:                          122
+
+dl7M_tln.a: [5]
+    abort.o                           6
+    atoi.o                            8
+    cppinit.o                        24
+    errno.o                          12        2        4
+    exit.o                            4
+    low_level_init.o                  4
+    sprintf.o                        52
+    xprintfsmall.o                1 240
+    xsprout.o                        10
+    xstoul.o                        412
+    xtls.o                            2
+    -----------------------------------------------------
+    Total:                        1 774        2        4
+
+drivers_MSP432P401R.arm4f: [6]
+    GPIOMSP432.orm4f                616                49
+    List.orm4f                       76
+    PowerMSP432.orm4f             1 276       78      196
+    RingBuf.orm4f                   196
+    UART.orm4f                      164        1        4
+    UARTMSP432.orm4f              2 796       40
+    -----------------------------------------------------
+    Total:                        5 124      119      249
+
+drivers_wifi_MSP432P401R.arm4f: [7]
+    -----------------------------------------------------
+    Total:
+
+iar.targets.arm.rts.arm4f: [8]
+    Assert.orm4f                     76
+    Core-label.orm4f                 48
+    Core-mem.orm4f                  350
+    Core-params.orm4f                72
+    Core-smem.orm4f                 192
+    Error.orm4f                     520
+    Gate.orm4f                       24
+    Memory.orm4f                    228
+    Registry.orm4f                   60
+    Startup.orm4f                   332
+    SysMin.orm4f                    268
+    System.orm4f                  2 872
+    Text.orm4f                      664
+    Timestamp.orm4f                  12
+    xdc_init.orm4f                   24        4        4
+    -----------------------------------------------------
+    Total:                        5 742        4        4
+
+m7M_tls.a: [9]
+    fpinit_M.o                       34
+    -----------------------------------------------------
+    Total:                           34
+
+msp432p4xx_driverlib.a: [10]
+    cpu.o                            20
+    cs.o                            248
+    flash.o                         156
+    gpio.o                          444       19       48
+    pcm.o                         1 064
+    rtc_c.o                          60
+    uart.o                          296
+    wdt_a.o                          36
+    -----------------------------------------------------
+    Total:                        2 324       19       48
+
+power_tirtos_MSP432P401R.arm4f: [11]
+    PowerMSP432_tirtos.orm4f        110
+    -----------------------------------------------------
+    Total:                          110
+
+rt7M_tl.a: [12]
+    ABImemclr.o                       6
+    ABImemclr4.o                      6
+    ABImemcpy_unaligned.o           118
+    ABImemset.o                     102
+    ABImemset48.o                    58
+    XXexit.o                         12
+    cexit.o                          10
+    cmain_call_ctors.o               32
+    data_init.o                      40
+    lz77_init_single.o              118
+    memchr.o                         88
+    strchr.o                         22
+    strcmp_unaligned.o               66
+    strlen.o                         54
+    strncpy_unaligned.o             108
+    zero_init3.o                     64
+    -----------------------------------------------------
+    Total:                          904
+
+sysbios.arm4f: [13]
+    BIOS.o                       14 508      880
+    m3_Hwi_asm_iar.obj              316
+    m3_Hwi_asm_switch_iar.obj       120
+    m3_TaskSupport_asm_iar.obj      180
+    -----------------------------------------------------
+    Total:                       15 124      880
+
+ti.mw.fatfs.arm4f: [14]
+    -----------------------------------------------------
+    Total:
+
+ti.uia.loggers.arm4f: [15]
+    LoggerStopMode.orm4f            664
+    -----------------------------------------------------
+    Total:                          664
+
+ti.uia.runtime.arm4f: [16]
+    QueueDescriptor.orm4f           132                 8
+    -----------------------------------------------------
+    Total:                          132                 8
+
+tirtosport.arm4f: [17]
+    ClockP_tirtos.orm4f             150
+    HwiP_tirtos.orm4f               138
+    SemaphoreP_tirtos.orm4f         170
+    -----------------------------------------------------
+    Total:                          458
+
+    Gaps                                       4      392
+    Linker created                            36    4 096
+---------------------------------------------------------
+    Grand Total:                 36 724   12 617   11 343
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address    Size  Type      Object
+-----                      -------    ----  ----      ------
+.iar.init_table$$Base   0x0000b7f8           --   Gb  - Linker created -
+.iar.init_table$$Limit  0x0000b81c           --   Gb  - Linker created -
+?main                   0x0000b615          Code  Gb  cmain.orm4f [4]
+CPU_cpsid               0x00007f05     0x8  Code  Gb  cpu.o [10]
+CPU_cpsie               0x00007f0d     0x8  Code  Gb  cpu.o [10]
+CPU_wfi                 0x00007f15     0x4  Code  Gb  cpu.o [10]
+CSTACK$$Base            0x200007c8          Data  Gb  - Linker created -
+CSTACK$$Length          0x00001000           --   Gb  - Linker created -
+CSTACK$$Limit           0x200017c8          Data  Gb  - Linker created -
+CS_initClockSignal      0x00007d01    0xc2  Code  Gb  cs.o [10]
+CS_setDCOCenteredFrequency
+                        0x00007dcf    0x16  Code  Gb  cs.o [10]
+ClockP_Params_init      0x0000ac6b     0x8  Code  Gb  ClockP_tirtos.orm4f [17]
+ClockP_create           0x0000abfd    0x58  Code  Gb  ClockP_tirtos.orm4f [17]
+ClockP_delete           0x0000ac55    0x16  Code  Gb  ClockP_tirtos.orm4f [17]
+ClockP_start            0x0000ac73    0x12  Code  Gb  ClockP_tirtos.orm4f [17]
+ClockP_stop             0x0000ac85     0xe  Code  Gb  ClockP_tirtos.orm4f [17]
+FlashCtl_disableReadBuffering
+                        0x00007e2f    0x34  Code  Gb  flash.o [10]
+FlashCtl_enableReadBuffering
+                        0x00007df9    0x36  Code  Gb  flash.o [10]
+FlashCtl_setWaitState   0x00007e63    0x26  Code  Gb  flash.o [10]
+GPIOMSP432_config       0x0000ba78    0x14  Data  Gb  MSP_EXP432P401R.o [1]
+GPIO_PORT_TO_BASE       0x200004f0    0x30  Data  Lc  gpio.o [10]
+GPIO_clearInterruptFlag
+                        0x00006b49     0xc  Code  Gb  gpio.o [10]
+GPIO_getEnabledInterruptStatus
+                        0x00006b6d    0x38  Code  Gb  gpio.o [10]
+GPIO_getInterruptStatus
+                        0x00006b3d     0xc  Code  Gb  gpio.o [10]
+GPIO_hwiIntFxn          0x00006541    0x46  Code  Gb  GPIOMSP432.orm4f [6]
+GPIO_init               0x00006587    0xb4  Code  Gb  GPIOMSP432.orm4f [6]
+GPIO_interruptEdgeSelect
+                        0x00006b55    0x18  Code  Gb  gpio.o [10]
+GPIO_setAsInputPin      0x00006a21    0x2e  Code  Gb  gpio.o [10]
+GPIO_setAsInputPinWithPullDownResistor
+                        0x00006ab9    0x38  Code  Gb  gpio.o [10]
+GPIO_setAsInputPinWithPullUpResistor
+                        0x00006af1    0x1e  Code  Gb  gpio.o [10]
+GPIO_setAsOutputPin     0x00006a11    0x10  Code  Gb  gpio.o [10]
+GPIO_setAsPeripheralModuleFunctionInputPin
+                        0x00006a4f    0x3c  Code  Gb  gpio.o [10]
+GPIO_setConfig          0x0000663b   0x110  Code  Gb  GPIOMSP432.orm4f [6]
+GPIO_setDriveStrengthHigh
+                        0x00006ba5    0x10  Code  Gb  gpio.o [10]
+GPIO_setDriveStrengthLow
+                        0x00006bb5    0x12  Code  Gb  gpio.o [10]
+GPIO_setOutputHighOnPin
+                        0x00006aa1     0xc  Code  Gb  gpio.o [10]
+GPIO_setOutputLowOnPin  0x00006aad     0xc  Code  Gb  gpio.o [10]
+GPIO_write              0x0000674b    0x3c  Code  Gb  GPIOMSP432.orm4f [6]
+HwiP_Params_init        0x00006c45     0xe  Code  Gb  HwiP_tirtos.orm4f [17]
+HwiP_create             0x00006bcd    0x5e  Code  Gb  HwiP_tirtos.orm4f [17]
+HwiP_delete             0x00006c2b    0x16  Code  Gb  HwiP_tirtos.orm4f [17]
+HwiP_disable            0x00006c41     0x4  Code  Gb  HwiP_tirtos.orm4f [17]
+HwiP_restore            0x00006c53     0x4  Code  Gb  HwiP_tirtos.orm4f [17]
+IO_SetLed               0x00005879   0x162  Code  Gb  uartecho.o [1]
+List_head               0x00007c55     0x4  Code  Gb  List.orm4f [6]
+List_next               0x00007c59     0x4  Code  Gb  List.orm4f [6]
+List_put                0x00007c5d    0x2a  Code  Gb  List.orm4f [6]
+List_remove             0x00007c87    0x1a  Code  Gb  List.orm4f [6]
+LoadInt                 0x0000717b    0x4c  Code  Lc  xprintfsmall.o [5]
+MSP_EXP432P401R_initGPIO
+                        0x00006915     0x8  Code  Gb  MSP_EXP432P401R.o [1]
+MSP_EXP432P401R_initGeneral
+                        0x0000690d     0x8  Code  Gb  MSP_EXP432P401R.o [1]
+MSP_EXP432P401R_initUART
+                        0x0000691d    0x1c  Code  Gb  MSP_EXP432P401R.o [1]
+PCM_enableRudeMode      0x00007c15     0xa  Code  Gb  pcm.o [10]
+PCM_getPowerState       0x00007c0d     0x8  Code  Gb  pcm.o [10]
+PCM_gotoLPM0            0x00007b6b    0x16  Code  Gb  pcm.o [10]
+PCM_gotoLPM3            0x00007b89    0x84  Code  Gb  pcm.o [10]
+PCM_gotoLPM4            0x00007b5b    0x10  Code  Gb  pcm.o [10]
+PCM_setPowerMode        0x00007a0f     0x4  Code  Gb  pcm.o [10]
+PCM_setPowerState       0x00007b25     0x4  Code  Gb  pcm.o [10]
+PCM_shutdownDevice      0x00007b2d    0x2e  Code  Gb  pcm.o [10]
+PowerMSP432_config      0x0000bab0    0x10  Data  Gb  MSP_EXP432P401R.o [1]
+PowerMSP432_getFreqs    0x000076b1    0x1a  Code  Gb  PowerMSP432.orm4f [6]
+PowerMSP432_getNumPerfLevels
+                        0x000076cb     0x4  Code  Gb  PowerMSP432.orm4f [6]
+PowerMSP432_initPolicy  0x00007ed1     0x2  Code  Gb  PowerMSP432_tirtos.orm4f [11]
+PowerMSP432_module      0x200005bc    0x28  Data  Gb  PowerMSP432.orm4f [6]
+PowerMSP432_perfLevels  0x20000520    0x9c  Data  Gb  PowerMSP432.orm4f [6]
+PowerMSP432_sleepPolicy
+                        0x00007e95    0x3c  Code  Gb  PowerMSP432_tirtos.orm4f [11]
+PowerMSP432_updateFreqs
+                        0x00007ed3    0x30  Code  Gb  PowerMSP432_tirtos.orm4f [11]
+Power_getConstraintMask
+                        0x000072cd     0xa  Code  Gb  PowerMSP432.orm4f [6]
+Power_getPerformanceLevel
+                        0x000072d7     0xa  Code  Gb  PowerMSP432.orm4f [6]
+Power_idleFunc          0x000072e1    0x16  Code  Gb  PowerMSP432.orm4f [6]
+Power_init              0x000072f7    0x4e  Code  Gb  PowerMSP432.orm4f [6]
+Power_registerNotify    0x00007345    0x1a  Code  Gb  PowerMSP432.orm4f [6]
+Power_releaseConstraint
+                        0x0000735f    0x32  Code  Gb  PowerMSP432.orm4f [6]
+Power_setConstraint     0x00007391    0x2e  Code  Gb  PowerMSP432.orm4f [6]
+Power_sleep             0x000073c1   0x2d0  Code  Gb  PowerMSP432.orm4f [6]
+Power_unregisterNotify  0x00007691    0x20  Code  Gb  PowerMSP432.orm4f [6]
+RTC_C_holdClock         0x00007cb5    0x14  Code  Gb  rtc_c.o [10]
+RTC_C_startClock        0x00007ca1    0x14  Code  Gb  rtc_c.o [10]
+Region$$Table$$Base     0x0000b7f8           --   Gb  - Linker created -
+Region$$Table$$Limit    0x0000b81c           --   Gb  - Linker created -
+RingBuf_construct       0x0000ab37    0x14  Code  Gb  RingBuf.orm4f [6]
+RingBuf_get             0x0000ab4b    0x44  Code  Gb  RingBuf.orm4f [6]
+RingBuf_peek            0x0000ab8f    0x20  Code  Gb  RingBuf.orm4f [6]
+RingBuf_put             0x0000abaf    0x4c  Code  Gb  RingBuf.orm4f [6]
+SHT$$INIT_ARRAY$$Base   0x0000be04           --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Limit  0x0000be08           --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Base
+                        0x0000be04           --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Limit
+                        0x0000be04           --   Gb  - Linker created -
+SIM900_PollCommand      0x00005a47    0x26  Code  Gb  uartecho.o [1]
+SIM900_ReadRespond      0x000059fd    0x4a  Code  Gb  uartecho.o [1]
+SIM900_WriteCommand     0x000059db    0x22  Code  Gb  uartecho.o [1]
+SemaphoreP_Params_init  0x0000aafd     0x8  Code  Gb  SemaphoreP_tirtos.orm4f [17]
+SemaphoreP_create       0x0000aa8d    0x5a  Code  Gb  SemaphoreP_tirtos.orm4f [17]
+SemaphoreP_delete       0x0000aae7    0x16  Code  Gb  SemaphoreP_tirtos.orm4f [17]
+SemaphoreP_pend         0x0000ab05    0x16  Code  Gb  SemaphoreP_tirtos.orm4f [17]
+SemaphoreP_postFromClock
+                        0x0000ab1b     0xe  Code  Gb  SemaphoreP_tirtos.orm4f [17]
+SemaphoreP_postFromISR  0x0000ab29     0xe  Code  Gb  SemaphoreP_tirtos.orm4f [17]
+UARTMSP432_close        0x0000a2b1    0x90  Code  Gb  UARTMSP432.orm4f [6]
+UARTMSP432_control      0x0000a341    0xaa  Code  Gb  UARTMSP432.orm4f [6]
+UARTMSP432_fxnTable     0x0000b6d4    0x28  Data  Gb  UARTMSP432.orm4f [6]
+UARTMSP432_hwiIntFxn    0x0000a3eb    0x4a  Code  Gb  UARTMSP432.orm4f [6]
+UARTMSP432_init         0x0000a435     0xc  Code  Gb  UARTMSP432.orm4f [6]
+UARTMSP432_open         0x0000a441   0x25e  Code  Gb  UARTMSP432.orm4f [6]
+UARTMSP432_read         0x0000a6b5    0x42  Code  Gb  UARTMSP432.orm4f [6]
+UARTMSP432_readCancel   0x0000a6f7    0x44  Code  Gb  UARTMSP432.orm4f [6]
+UARTMSP432_readPolling  0x0000a73b    0xc2  Code  Gb  UARTMSP432.orm4f [6]
+UARTMSP432_write        0x0000a7fd    0x7c  Code  Gb  UARTMSP432.orm4f [6]
+UARTMSP432_writeCancel  0x0000a879    0x5a  Code  Gb  UARTMSP432.orm4f [6]
+UARTMSP432_writePolling
+                        0x0000a8d3    0x64  Code  Gb  UARTMSP432.orm4f [6]
+UART_Params_init        0x00006809    0x12  Code  Gb  UART.orm4f [6]
+UART_clearInterruptFlag
+                        0x0000aa77     0xa  Code  Gb  uart.o [10]
+UART_config             0x0000b7b0    0x24  Data  Gb  MSP_EXP432P401R.o [1]
+UART_count              0x200005e4     0x4  Data  Lc  UART.orm4f [6]
+UART_defaultParams      0x00006828    0x24  Data  Gb  UART.orm4f [6]
+UART_disableInterrupt   0x0000aa59    0x18  Code  Gb  uart.o [10]
+UART_disableModule      0x0000aa31     0xc  Code  Gb  uart.o [10]
+UART_enableInterrupt    0x0000aa43    0x16  Code  Gb  uart.o [10]
+UART_enableModule       0x0000aa25     0xc  Code  Gb  uart.o [10]
+UART_getInterruptStatus
+                        0x0000aa71     0x6  Code  Gb  uart.o [10]
+UART_init               0x000067a9    0x34  Code  Gb  UART.orm4f [6]
+UART_initModule         0x0000a965    0x80  Code  Gb  uart.o [10]
+UART_open               0x000067dd    0x22  Code  Gb  UART.orm4f [6]
+UART_queryStatusFlags   0x0000aa3d     0x6  Code  Gb  uart.o [10]
+UART_readPolling        0x0000681b     0x6  Code  Gb  UART.orm4f [6]
+UART_receiveData        0x0000aa01    0x24  Code  Gb  uart.o [10]
+UART_transmitData       0x0000a9e5    0x1c  Code  Gb  uart.o [10]
+UART_writePolling       0x00006821     0x6  Code  Gb  UART.orm4f [6]
+WDT_A_holdTimer         0x00007cdd     0xa  Code  Gb  wdt_a.o [10]
+WDT_A_startTimer        0x00007ce7     0xa  Code  Gb  wdt_a.o [10]
+_LitobSmall             0x000071c7    0xce  Code  Lc  xprintfsmall.o [5]
+_PrintfSmall            0x00006df5   0x380  Code  Gb  xprintfsmall.o [5]
+_PutcharsSmall          0x00007295    0x2e  Code  Lc  xprintfsmall.o [5]
+_SProut                 0x000060a7     0xa  Code  Gb  xsprout.o [5]
+__PCM_setCoreVoltageLevelAdvanced
+                        0x0000782d   0x10c  Code  Lc  pcm.o [10]
+__PCM_setPowerModeAdvanced
+                        0x00007939    0xca  Code  Lc  pcm.o [10]
+__PCM_setPowerStateAdvanced
+                        0x00007a17   0x10e  Code  Lc  pcm.o [10]
+__aeabi_errno_addr      0x00007821     0x6  Code  Gb  errno.o [5]
+__aeabi_memclr          0x00006475          Code  Gb  ABImemclr.o [12]
+__aeabi_memclr4         0x00006455          Code  Gb  ABImemclr4.o [12]
+__aeabi_memset          0x000047ad          Code  Gb  ABImemset.o [12]
+__aeabi_memset4         0x000069bd          Code  Gb  ABImemset48.o [12]
+__aeabi_memset8         0x000069bd          Code  Gb  ABImemset48.o [12]
+__call_ctors            0x0000b981    0x18  Code  Gb  cppinit.o [5]
+__cmain                 0x0000b615          Code  Gb  cmain.orm4f [4]
+__dummy                 0x20002d88     0x4  Data  Lc  xdc_init.orm4f [8]
+__exit                  0x000069f9          Code  Gb  XXexit.o [12]
+__iar_Errno             0x200007c4     0x4  Data  Gb  errno.o [5]
+__iar_Memchr            0x000077c9          Code  Gb  memchr.o [12]
+__iar_Memset            0x000047ad          Code  Gb  ABImemset.o [12]
+__iar_Memset4_word      0x000069c5          Code  Gb  ABImemset48.o [12]
+__iar_Memset8_word      0x000069c5          Code  Gb  ABImemset48.o [12]
+__iar_Memset_word       0x000047b5          Code  Gb  ABImemset.o [12]
+__iar_Stoul             0x00006da1     0x4  Code  Gb  xstoul.o [5]
+__iar_Stoulx            0x00006c59   0x142  Code  Gb  xstoul.o [5]
+__iar_Strchr            0x0000684d          Code  Gb  strchr.o [12]
+__iar_cstart_call_ctors
+                        0x0000b961    0x20  Code  Gb  cmain_call_ctors.o [12]
+__iar_data_init3        0x0000b635    0x28  Code  Gb  data_init.o [12]
+__iar_dlib_perthread_access
+                        0x00007f03     0x2  Code  Gb  xtls.o [5]
+__iar_init_vfp          0x0000b7d5          Code  Gb  fpinit_M.o [9]
+__iar_lz77_init_single3
+                        0x00004813    0x76  Code  Gb  lz77_init_single.o [12]
+__iar_program_start     0x0000ba61          Code  Gb  boot.orm4f [4]
+__iar_program_startC    0x0000b5c9    0x2a  Code  Gb  cstartup_M.orm4f [4]
+__iar_unaligned___aeabi_memcpy
+                        0x00006031          Code  Gb  ABImemcpy_unaligned.o [12]
+__iar_unaligned___aeabi_memcpy4
+                        0x00006051          Code  Gb  ABImemcpy_unaligned.o [12]
+__iar_unaligned___aeabi_memcpy8
+                        0x00006051          Code  Gb  ABImemcpy_unaligned.o [12]
+__iar_unaligned_strcmp  0x000064fd          Code  Gb  strcmp_unaligned.o [12]
+__iar_unaligned_strncpy
+                        0x0000686d          Code  Gb  strncpy_unaligned.o [12]
+__iar_zero_init3        0x0000b4b5    0x40  Code  Gb  zero_init3.o [12]
+__low_level_init        0x0000b62f     0x4  Code  Gb  low_level_init.o [5]
+__sti__routine          0x0000ba49    0x12  Code  Lc  xdc_init.orm4f [8]
+__vector_table          0x00000000    0x3c  Data  Gb  5_prm4f.orm4f [2]
+__write                 0x00005877     0x2  Code  Gb  uartecho.o [1]
+_call_main              0x0000b625          Code  Gb  cmain.orm4f [4]
+_exit                   0x00006a05          Code  Gb  cexit.o [12]
+_main                   0x0000b62b          Code  Gb  cmain.orm4f [4]
+abort                   0x000064f1     0x6  Code  Gb  abort.o [5]
+atoi                    0x00006863     0x8  Code  Gb  atoi.o [5]
+digits                  0x00006da4    0x28  Data  Lc  xstoul.o [5]
+echoFxn                 0x00005a71   0x232  Code  Gb  uartecho.o [1]
+exit                    0x000064f7     0x4  Code  Gb  exit.o [5]
+gpioCallbackFunctions   0x20002d60     0x8  Data  Gb  MSP_EXP432P401R.o [1]
+gpioCallbackInfo        0x20002d30    0x30  Data  Lc  GPIOMSP432.orm4f [6]
+gpioPinConfigs          0x20000140    0x18  Data  Gb  MSP_EXP432P401R.o [1]
+iar_xdc_startup_exec    0x0000b601     0xc  Code  Gb  iar_xdc_init.orm4f [4]
+iar_xdc_startup_reset   0x0000b5f5     0xc  Code  Gb  iar_xdc_init.orm4f [4]
+initHw                  0x00009e79    0x90  Code  Lc  UARTMSP432.orm4f [6]
+initPerfControl         0x000076cf    0xe4  Code  Lc  PowerMSP432.orm4f [6]
+interruptType           0x00006798     0x8  Data  Lc  GPIOMSP432.orm4f [6]
+main                    0x00005cad    0x70  Code  Gb  uartecho.o [1]
+memchr                  0x000077c9          Code  Gb  memchr.o [12]
+ndigs                   0x00006dcc    0x28  Data  Lc  xstoul.o [5]
+parityTypes             0x0000a93c     0x8  Data  Lc  UARTMSP432.orm4f [6]
+perfChangeNotifyFxn     0x00009f09    0x3a  Code  Lc  UARTMSP432.orm4f [6]
+portHwiCreatedBitMask   0x20002d8e     0x1  Data  Lc  GPIOMSP432.orm4f [6]
+portInterruptIds        0x000067a0     0x8  Data  Lc  GPIOMSP432.orm4f [6]
+readBlockingTimeout     0x00009f43    0x10  Code  Lc  UARTMSP432.orm4f [6]
+readIsrBinaryBlocking   0x00009f55    0x4a  Code  Lc  UARTMSP432.orm4f [6]
+readIsrBinaryCallback   0x00009fa1    0x40  Code  Lc  UARTMSP432.orm4f [6]
+readIsrTextBlocking     0x00009fe1    0x76  Code  Lc  UARTMSP432.orm4f [6]
+readIsrTextCallback     0x0000a059    0x84  Code  Lc  UARTMSP432.orm4f [6]
+readSemCallback         0x0000a0dd     0x8  Code  Lc  UARTMSP432.orm4f [6]
+readTaskBlocking        0x0000a0e5    0xa8  Code  Lc  UARTMSP432.orm4f [6]
+readTaskCallback        0x0000a18d    0x88  Code  Lc  UARTMSP432.orm4f [6]
+sprintf                 0x000068d9    0x34  Code  Gb  sprintf.o [5]
+staticFxnTable          0x0000a944    0x20  Data  Lc  UARTMSP432.orm4f [6]
+stopBits                0x0000a938     0x4  Data  Lc  UARTMSP432.orm4f [6]
+strchr                  0x0000684d          Code  Gb  strchr.o [12]
+strlen                  0x0000647d          Code  Gb  strlen.o [12]
+task0Stack              0x20002000   0x300  Data  Gb  uartecho.o [1]
+task0Struct             0x20002b00    0x50  Data  Gb  uartecho.o [1]
+ti_sysbios_BIOS_Module__state__V
+                        0x200005e8    0x24  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_BIOS_atExitFunc__I
+                        0x00003a5d    0x18  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_BIOS_errorRaiseHook__I
+                        0x00003a89    0x1e  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_BIOS_exitFunc__I
+                        0x00003a75    0x14  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_BIOS_linkedWithIncorrectBootLibrary__E
+                        0x0000003d     0x2  Code  Gb  BIOS.o [13]
+ti_sysbios_BIOS_setCpuFreq__E
+                        0x0000004b     0xe  Code  Gb  BIOS.o [13]
+ti_sysbios_BIOS_setThreadType__E
+                        0x0000003f     0xc  Code  Gb  BIOS.o [13]
+ti_sysbios_BIOS_startFunc__I
+                        0x00003a27    0x32  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_BIOS_start__E
+                        0x00000059     0x8  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_E_NMI__C
+                        0x0000bb98     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_E_alreadyDefined__C
+                        0x0000bb9c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_E_busFault__C
+                        0x0000bba0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_E_debugMon__C
+                        0x0000bba4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_E_hardFault__C
+                        0x0000bba8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_E_memFault__C
+                        0x0000bbac     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_E_noIsr__C
+                        0x0000bbb0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_E_reserved__C
+                        0x0000bbb4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_E_svCall__C
+                        0x0000bbb8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_E_usageFault__C
+                        0x0000bbbc     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Handle__label__S
+                        0x00003f85    0x1a  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Instance_finalize__E
+                        0x00001a7d    0x34  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_Instance_init__E
+                        0x00001969    0x88  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_LD_end__C
+                        0x0000bbc0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_LM_begin__C
+                        0x0000bbc4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module_State_0_excActive__A
+                        0x20002d8c     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module_State_0_excContext__A
+                        0x20002d78     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module_State_0_excStack__A
+                        0x20002d7c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module__diagsEnabled__C
+                        0x0000bbc8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module__diagsIncluded__C
+                        0x0000bbcc     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module__diagsMask__C
+                        0x0000bbd0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module__id__C
+                        0x00006452     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module__loggerDefined__C
+                        0x0000645a     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module__loggerFxn1__C
+                        0x0000bbd4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module__loggerFxn8__C
+                        0x0000bbd8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module__loggerObj__C
+                        0x0000bbdc     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module__root__V
+                        0x20000158     0x8  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module__state__V
+                        0x2000060c    0x34  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Module_startup__E
+                        0x00001909    0x4a  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_NUM_INTERRUPTS__C
+                        0x0000bbe0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Object__DESC__C
+                        0x0000b820    0x20  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Object__PARAMS__C
+                        0x0000b56c    0x30  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Object__count__C
+                        0x0000bbe4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Object__get__S
+                        0x00003fad    0x10  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Object__table__V
+                        0x20000160    0x30  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_Params__init__S
+                        0x00003f9f     0xa  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_ccr__C
+                        0x0000bbe8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_construct
+                        0x00003fc9    0x52  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_destruct
+                        0x00004021    0x1c  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_disableFxn__E
+                        0x00001b95     0xc  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_disableInterrupt__E
+                        0x00001ba9    0x4a  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_dispatchC__I
+                        0x000025ed    0xf4  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_dispatchTable
+                        0x20002700   0x140  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_dispatch__I
+                        0x0000b005          Code  Gb  m3_Hwi_asm_iar.obj [13]
+ti_sysbios_family_arm_m3_Hwi_doSwiRestore__I
+                        0x000026e1     0x6  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_doTaskRestore__I
+                        0x000026e7    0x1e  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_enableInterrupt__E
+                        0x00001bf5    0x4a  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_excBusFault__I
+                        0x000020e9    0x80  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_excDebugMon__I
+                        0x000022ed    0x7e  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_excDumpRegs__I
+                        0x000023d1   0x190  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_excFillContext__I
+                        0x00001e11   0x11a  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_excHandlerAsm__I
+                        0x0000b121          Code  Gb  m3_Hwi_asm_iar.obj [13]
+ti_sysbios_family_arm_m3_Hwi_excHandlerFunc__C
+                        0x0000bbec     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_excHandlerMax__I
+                        0x00001cc9   0x126  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_excHandler__I
+                        0x00001ca1    0x16  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_excHardFault__I
+                        0x00001f2b    0xbc  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_excHookFuncs__A
+                        0x0000bb38     0x8  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_excHookFuncs__C
+                        0x0000bbf0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_excMemFault__I
+                        0x00001ffd    0x74  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_excUsageFault__I
+                        0x000021e9    0x8e  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_getStackInfo__E
+                        0x00001c59    0x3e  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_initIsrStackSize
+                        0x00003aa7     0xc  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_initNVIC__E
+                        0x00001ab5    0xca  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_initStacks__E
+                        0x00004469          Code  Gb  m3_Hwi_asm_switch_iar.obj [13]
+ti_sysbios_family_arm_m3_Hwi_nullIsrFunc__C
+                        0x0000bbf4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_nvic {Abs}
+                        0xe000e000           --   Gb  command line/config [3]
+ti_sysbios_family_arm_m3_Hwi_pendSV__I
+                        0x0000b0e1          Code  Gb  m3_Hwi_asm_iar.obj [13]
+ti_sysbios_family_arm_m3_Hwi_postInit__I
+                        0x000019fd    0x80  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_priGroup__C
+                        0x0000bbf8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_ramVectors {Abs}
+                        0x20000000   0x140  Data  Wk  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Hwi_restoreFxn__E
+                        0x00001ba1     0x6  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_return
+                        0x0000b105          Code  Gb  m3_Hwi_asm_iar.obj [13]
+ti_sysbios_family_arm_m3_Hwi_startup__E
+                        0x00001b89     0x8  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Hwi_switchFromBootStack__E
+                        0x00001c41    0x12  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_TaskSupport_buildTaskStack
+                        0x00004889          Code  Gb  m3_TaskSupport_asm_iar.obj [13]
+ti_sysbios_family_arm_m3_TaskSupport_checkStack__E
+                        0x00002741     0xc  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_TaskSupport_getStackAlignment__E
+                        0x00002751     0x8  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_TaskSupport_glue
+                        0x0000492d          Code  Gb  m3_TaskSupport_asm_iar.obj [13]
+ti_sysbios_family_arm_m3_TaskSupport_stackAlignment__C
+                        0x0000bbfc     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_TaskSupport_start__E
+                        0x0000270d    0x34  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_TaskSupport_swap__E
+                        0x00004915          Code  Gb  m3_TaskSupport_asm_iar.obj [13]
+ti_sysbios_family_arm_m3_Timer_E_cannotSupport__C
+                        0x0000bc00     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Timer_Module__id__C
+                        0x0000647a     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Timer_Module__state__V
+                        0x20000640     0xc  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Timer_Module_startup__E
+                        0x0000276d    0x7c  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Timer_Object__table__V
+                        0x20000190    0x30  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Timer_getExpiredCounts__E
+                        0x000028fd    0x38  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Timer_periodicStub__I
+                        0x00002939    0x2a  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Timer_setPeriod__E
+                        0x000028ad    0x4c  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Timer_start__E
+                        0x00002855    0x58  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_Timer_startupNeeded__C
+                        0x0000bc04     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_Timer_startup__E
+                        0x000027f1    0x24  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_TimestampProvider_Module__state__V
+                        0x2000064c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_TimestampProvider_Module_startup__E
+                        0x00002971    0x1a  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_TimestampProvider_configTimer__C
+                        0x000064b2     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_m3_TimestampProvider_get32__E
+                        0x0000299b    0x28  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_TimestampProvider_get64__E
+                        0x000029d9    0x34  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_TimestampProvider_getFreq__E
+                        0x00002a11     0xe  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_TimestampProvider_rolloverFunc__E
+                        0x00002999     0x2  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_m3_TimestampProvider_startTimer__E
+                        0x0000298b     0x8  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_msp432_ClockFreqs_Module__state__V
+                        0x20000650     0xc  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_msp432_ClockFreqs_setFrequency__E
+                        0x000038c1    0x1c  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_msp432_Timer_Module_State_0_device__A
+                        0x2000020c    0x20  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_msp432_Timer_Module_State_0_handles__A
+                        0x2000022c    0x10  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_msp432_Timer_Module__state__V
+                        0x2000065c     0xc  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_msp432_Timer_Module_startup__E
+                        0x0000369d    0x7a  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_msp432_Timer_Object__table__V
+                        0x200001c0    0x4c  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_msp432_Timer_getMaxTicks__E
+                        0x00003689     0xc  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_msp432_Timer_initDevice__I
+                        0x00003869    0x4e  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_msp432_Timer_numTimerDevices__C
+                        0x0000bc08     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_msp432_Timer_periodicStub__E
+                        0x000037c9    0x98  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_msp432_Timer_startupNeeded__C
+                        0x0000bc0c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_family_arm_msp432_Timer_startup__E
+                        0x00003717    0x7e  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_msp432_init_Boot_configureClocksHigh
+                        0x000018a9    0x4e  Code  Gb  BIOS.o [13]
+ti_sysbios_family_arm_msp432_init_Boot_disableWatchdog
+                        0x000018fd     0xc  Code  Gb  BIOS.o [13]
+ti_sysbios_family_xxx_Hwi_switchAndRunFunc
+                        0x00004449          Code  Gb  m3_Hwi_asm_switch_iar.obj [13]
+ti_sysbios_gates_GateHwi_Handle__label__S
+                        0x0000404d    0x1a  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateHwi_Instance_init__E
+                        0x00002a31     0x2  Code  Gb  BIOS.o [13]
+ti_sysbios_gates_GateHwi_Module__FXNS__C
+                        0x0000b6fc    0x24  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateHwi_Module__root__V
+                        0x2000023c     0x8  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateHwi_Object__DESC__C
+                        0x0000b840    0x20  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateHwi_Object__PARAMS__C
+                        0x0000b9d0    0x18  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateHwi_Object__create__S
+                        0x0000406d    0x2a  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateHwi_Object__delete__S
+                        0x00004097    0x20  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateHwi_Object__table__V
+                        0x20000244     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateHwi_enter__E
+                        0x00002a33     0xc  Code  Gb  BIOS.o [13]
+ti_sysbios_gates_GateHwi_leave__E
+                        0x00002a3f     0x6  Code  Gb  BIOS.o [13]
+ti_sysbios_gates_GateHwi_query__E
+                        0x00002a45     0x4  Code  Gb  BIOS.o [13]
+ti_sysbios_gates_GateMutex_A_badContext__C
+                        0x0000bc10     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Handle__label__S
+                        0x000040b7    0x1a  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Instance_State_sem__O
+                        0x0000bc14     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Instance_finalize__E
+                        0x00002a69     0xc  Code  Gb  BIOS.o [13]
+ti_sysbios_gates_GateMutex_Instance_init__E
+                        0x00002a49    0x1a  Code  Gb  BIOS.o [13]
+ti_sysbios_gates_GateMutex_Module__FXNS__C
+                        0x0000b720    0x24  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Module__diagsEnabled__C
+                        0x0000bc18     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Module__diagsIncluded__C
+                        0x0000bc1c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Module__diagsMask__C
+                        0x0000bc20     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Module__id__C
+                        0x000064fa     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Module__root__V
+                        0x20000248     0x8  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Object__DESC__C
+                        0x0000b860    0x20  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Object__PARAMS__C
+                        0x0000b9e8    0x18  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Object__create__S
+                        0x000040d1    0x2c  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Object__delete__S
+                        0x000040fd    0x24  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_Object__table__V
+                        0x20000250    0x38  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_gates_GateMutex_enter__E
+                        0x00002ab9   0x31e  Code  Gb  BIOS.o [13]
+ti_sysbios_gates_GateMutex_leave__E
+                        0x00002dd7    0x12  Code  Gb  BIOS.o [13]
+ti_sysbios_gates_GateMutex_query__E
+                        0x00002df5     0x4  Code  Gb  BIOS.o [13]
+ti_sysbios_hal_Hwi_E_stackOverflow__C
+                        0x0000bc24     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_hal_Hwi_HwiProxy_Module__startupDone__S
+                        0x00003ee7    0x12  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_hal_Hwi_HwiProxy_getStackInfo__E
+                        0x00003ef9     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_hal_Hwi_HwiProxy_startup__E
+                        0x00003efd     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_hal_Hwi_HwiProxy_switchFromBootStack__E
+                        0x00003f01     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_hal_Hwi_Module__id__C
+                        0x0000653e     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_hal_Hwi_Module_startup__E
+                        0x00001807    0x12  Code  Gb  BIOS.o [13]
+ti_sysbios_hal_Hwi_checkStack
+                        0x00001871    0x30  Code  Gb  BIOS.o [13]
+ti_sysbios_hal_Hwi_initStack
+                        0x00001819    0x58  Code  Gb  BIOS.o [13]
+ti_sysbios_hal_Hwi_startup__E
+                        0x000018a1     0x4  Code  Gb  BIOS.o [13]
+ti_sysbios_heaps_HeapMem_A_align__C
+                        0x0000bc28     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_A_heapSize__C
+                        0x0000bc2c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_A_invalidFree__C
+                        0x0000bc30     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_A_zeroBlock__C
+                        0x0000bc34     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_E_memory__C
+                        0x0000bc38     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Handle__label__S
+                        0x00004125    0x1a  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Instance_State_0_buf__A
+                        0x200017c8   0x400  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Instance_init__E
+                        0x00002e39   0x122  Code  Gb  BIOS.o [13]
+ti_sysbios_heaps_HeapMem_Module_GateProxy_enter__E
+                        0x00003f09     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Module_GateProxy_leave__E
+                        0x00003f0d     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Module_GateProxy_query__E
+                        0x00003f05     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Module__FXNS__C
+                        0x0000b65c    0x28  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Module__diagsEnabled__C
+                        0x0000bc3c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Module__diagsIncluded__C
+                        0x0000bc40     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Module__diagsMask__C
+                        0x0000bc44     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Module__gateObj__C
+                        0x0000bc48     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Module__id__C
+                        0x0000686a     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Module__root__V
+                        0x20000288     0x8  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Object__DESC__C
+                        0x0000b880    0x20  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Object__PARAMS__C
+                        0x0000b744    0x24  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Object__count__C
+                        0x0000bc4c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Object__create__S
+                        0x0000414f    0x2c  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Object__delete__S
+                        0x0000417b    0x22  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Object__get__S
+                        0x0000413f    0x10  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_Object__table__V
+                        0x20000290    0x18  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_heaps_HeapMem_alloc__E
+                        0x00002f61   0x246  Code  Gb  BIOS.o [13]
+ti_sysbios_heaps_HeapMem_free__E
+                        0x000031ad   0x25c  Code  Gb  BIOS.o [13]
+ti_sysbios_heaps_HeapMem_getStats__E
+                        0x0000340f    0x46  Code  Gb  BIOS.o [13]
+ti_sysbios_heaps_HeapMem_init__I
+                        0x00002df9    0x3c  Code  Gb  BIOS.o [13]
+ti_sysbios_heaps_HeapMem_isBlocking__E
+                        0x00003409     0x6  Code  Gb  BIOS.o [13]
+ti_sysbios_heaps_HeapMem_reqAlign__C
+                        0x0000bc50     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_A_badThreadType__C
+                        0x0000bc54     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Instance_finalize__E
+                        0x00000291    0x94  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Clock_Instance_init__E
+                        0x00000181   0x110  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Clock_LM_begin__C
+                        0x0000bc58     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_LM_tick__C
+                        0x0000bc5c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_LW_delayed__C
+                        0x0000bc60     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module_State_clockQ__O
+                        0x0000bc64     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module__diagsEnabled__C
+                        0x0000bc68     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module__diagsIncluded__C
+                        0x0000bc6c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module__diagsMask__C
+                        0x0000bc70     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module__id__C
+                        0x000069f6     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module__loggerDefined__C
+                        0x00006a0e     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module__loggerFxn1__C
+                        0x0000bc74     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module__loggerFxn2__C
+                        0x0000bc78     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module__loggerObj__C
+                        0x0000bc7c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module__root__V
+                        0x200002a8     0x8  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module__state__V
+                        0x20000668    0x2c  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Module_startup__E
+                        0x00000061    0x1a  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Clock_Object__DESC__C
+                        0x0000b8a0    0x20  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Object__PARAMS__C
+                        0x0000b768    0x24  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_Params__init__S
+                        0x0000419d     0xa  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_TimerProxy_Module__startupDone__S
+                        0x00003f11    0x10  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_TimerProxy_getMaxTicks__E
+                        0x00003f21     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_construct
+                        0x000041ad    0x2e  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_destruct
+                        0x000041db    0x1e  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_doTick__I
+                        0x000039fb    0x2c  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Clock_logTick__E
+                        0x0000039d    0x4e  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Clock_setTimeout__E
+                        0x00000399     0x4  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Clock_start__E
+                        0x00000325    0x6e  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Clock_stop__E
+                        0x00000393     0x6  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Clock_workFunc__E
+                        0x0000007d   0x102  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Idle_funcList__A
+                        0x0000baf0     0xc  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Idle_funcList__C
+                        0x0000bb40     0x8  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Idle_loop__E
+                        0x000003ed    0x20  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Idle_run__E
+                        0x0000040d    0x1e  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Queue_Instance_init__E
+                        0x0000045d     0x6  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Queue_Module__root__V
+                        0x200002b0     0x8  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Queue_Object__DESC__C
+                        0x0000b8c0    0x20  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Queue_Object__PARAMS__C
+                        0x0000ba00    0x18  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Queue_Object__get__S
+                        0x000041f9     0x8  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Queue_construct
+                        0x00004201    0x28  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Queue_destruct
+                        0x00004229    0x1c  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Queue_empty__E
+                        0x00000463     0xc  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Semaphore_A_badContext__C
+                        0x0000bc80     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_A_noEvents__C
+                        0x0000bc84     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_A_overflow__C
+                        0x0000bc88     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_A_pendTaskDisabled__C
+                        0x0000bc8c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Instance_State_pendQ__O
+                        0x0000bc90     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Instance_finalize__E
+                        0x000004fb     0xc  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Semaphore_Instance_init__E
+                        0x0000046f    0x8c  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Semaphore_LM_pend__C
+                        0x0000bc94     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_LM_post__C
+                        0x0000bc98     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Module__diagsEnabled__C
+                        0x0000bc9c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Module__diagsIncluded__C
+                        0x0000bca0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Module__diagsMask__C
+                        0x0000bca4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Module__id__C
+                        0x00006c56     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Module__loggerDefined__C
+                        0x0000abfa     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Module__loggerFxn2__C
+                        0x0000bca8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Module__loggerFxn4__C
+                        0x0000bcac     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Module__loggerObj__C
+                        0x0000bcb0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Module__root__V
+                        0x200002b8     0x8  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Object__DESC__C
+                        0x0000b8e0    0x20  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Object__PARAMS__C
+                        0x0000b78c    0x24  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_Params__init__S
+                        0x00004245     0xa  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_construct
+                        0x0000424f    0x2c  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_destruct
+                        0x0000427b    0x1e  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Semaphore_pendTimeout__I
+                        0x00000511    0x30  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Semaphore_pend__E
+                        0x00000541   0x2e6  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Semaphore_post__E
+                        0x0000082d   0x13a  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Swi_Handle__label__S
+                        0x00004299    0x1a  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_LD_end__C
+                        0x0000bcb4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_LM_begin__C
+                        0x0000bcb8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_LM_post__C
+                        0x0000bcbc     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Module_State_0_readyQ__A
+                        0x200002f0    0x80  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Module__diagsEnabled__C
+                        0x0000bcc0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Module__diagsIncluded__C
+                        0x0000bcc4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Module__diagsMask__C
+                        0x0000bcc8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Module__id__C
+                        0x0000ac92     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Module__loggerDefined__C
+                        0x0000b5f2     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Module__loggerFxn1__C
+                        0x0000bccc     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Module__loggerFxn4__C
+                        0x0000bcd0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Module__loggerObj__C
+                        0x0000bcd4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Module__state__V
+                        0x20000694    0x1c  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Module_startup__E
+                        0x00000b1d    0x26  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Swi_Object__count__C
+                        0x0000bcd8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Object__get__S
+                        0x000042b3    0x10  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_Object__table__V
+                        0x200002c0    0x30  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Swi_disable__E
+                        0x00000b8b     0xc  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Swi_post__E
+                        0x00000c4d    0x9e  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Swi_restoreHwi__E
+                        0x00000be5    0x64  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Swi_restore__E
+                        0x00000b97    0x4c  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Swi_runLoop__I
+                        0x00000a5d    0x4e  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Swi_run__I
+                        0x00000969    0xf4  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Swi_schedule__I
+                        0x00000aad    0x68  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Swi_startup__E
+                        0x00000b43    0x48  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_A_badPriority__C
+                        0x0000bcdc     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_A_badTaskState__C
+                        0x0000bce0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_A_badThreadType__C
+                        0x0000bce4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_A_noPendElem__C
+                        0x0000bce8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_E_spOutOfBounds__C
+                        0x0000bcec     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_E_stackOverflow__C
+                        0x0000bcf0     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Handle__label__S
+                        0x000042c3    0x1a  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Instance_State_0_stack__A
+                        0x20002300   0x200  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Instance_finalize__E
+                        0x00001481   0x25c  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_Instance_init__E
+                        0x00001221   0x188  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_LD_block__C
+                        0x0000bcf4     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_LD_exit__C
+                        0x0000bcf8     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_LD_ready__C
+                        0x0000bcfc     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_LM_switch__C
+                        0x0000bd00     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module_State_0_idleTask__A
+                        0x20000448     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module_State_0_readyQ__A
+                        0x200003c8    0x80  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module_State_inactiveQ__O
+                        0x0000bd04     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module__diagsEnabled__C
+                        0x0000bd08     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module__diagsIncluded__C
+                        0x0000bd0c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module__diagsMask__C
+                        0x0000bd10     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module__id__C
+                        0x0000b632     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module__loggerDefined__C
+                        0x0000b81c     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module__loggerFxn2__C
+                        0x0000bd14     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module__loggerFxn4__C
+                        0x0000bd18     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module__loggerObj__C
+                        0x0000bd1c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module__root__V
+                        0x20000370     0xc  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module__state__V
+                        0x200006b0    0x44  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Module_startup__E
+                        0x00000e99    0x4c  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_Object__DESC__C
+                        0x0000b900    0x20  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Object__PARAMS__C
+                        0x0000b4f4    0x3c  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Object__count__C
+                        0x0000bd20     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Object__get__S
+                        0x000042e9     0xe  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Object__table__V
+                        0x2000037c    0x4c  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Params__init__S
+                        0x000042dd     0xa  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_Params_init
+                        0x00005865    0x12  Code  Lc  uartecho.o [1]
+ti_sysbios_knl_Task_SupportProxy_Module__startupDone__S
+                        0x00003f25     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_SupportProxy_checkStack__E
+                        0x00003f31     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_SupportProxy_getStackAlignment__E
+                        0x00003f35     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_SupportProxy_start__E
+                        0x00003f29     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_SupportProxy_swap__E
+                        0x00003f2d     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_allBlockedFunc__C
+                        0x0000bd24     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_blockI__E
+                        0x000016f9    0x8e  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_checkStacks__E
+                        0x0000106d    0xbc  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_construct
+                        0x00004301    0x48  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_defaultStackHeap__C
+                        0x0000bd28     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_defaultStackSize__C
+                        0x0000bd2c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_disable__E
+                        0x00001039     0xc  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_enter__I
+                        0x00000e81    0x18  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_exit__E
+                        0x00001131    0xc0  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_numConstructedTasks__C
+                        0x0000bd30     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_knl_Task_postInit__I
+                        0x000013ad    0xc4  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_restore__E
+                        0x00001045    0x28  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_schedule__I
+                        0x00000d31   0x150  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_startup__E
+                        0x00000ef1   0x122  Code  Gb  BIOS.o [13]
+ti_sysbios_knl_Task_swapReturn
+                        0x00004921          Code  Gb  m3_TaskSupport_asm_iar.obj [13]
+ti_sysbios_knl_Task_unblockI__E
+                        0x00001787    0x80  Code  Gb  BIOS.o [13]
+ti_sysbios_utils_Load_LS_cpuLoad__C
+                        0x0000bd34     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_Module_State_0_runningTask__A
+                        0x20002d84     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_Module_State_0_taskStartTime__A
+                        0x20002d80     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_Module__diagsEnabled__C
+                        0x0000bd38     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_Module__diagsIncluded__C
+                        0x0000bd3c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_Module__diagsMask__C
+                        0x0000bd40     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_Module__id__C
+                        0x0000ba76     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_Module__loggerDefined__C
+                        0x0000be08     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_Module__loggerFxn1__C
+                        0x0000bd44     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_Module__loggerObj__C
+                        0x0000bd48     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_Module__state__V
+                        0x200006f4    0x98  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_idleFxn__E
+                        0x00003475    0xb0  Code  Gb  BIOS.o [13]
+ti_sysbios_utils_Load_postUpdate__C
+                        0x0000bd4c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_updateInIdle__C
+                        0x0000be0a     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_updateLoads__E
+                        0x00003561   0x106  Code  Gb  BIOS.o [13]
+ti_sysbios_utils_Load_update__E
+                        0x00003ec7     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_sysbios_utils_Load_windowInMs__C
+                        0x0000bd50     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Handle__label__S
+                        0x0000434b    0x1a  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Instance_State_0_hdr__A
+                        0x20002c00    0x30  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Instance_State_0_packetArray__A
+                        0x20002980   0x100  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Instance_State_1_hdr__A
+                        0x20002c80    0x30  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Instance_State_1_packetArray__A
+                        0x20002500   0x200  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Instance_State_2_hdr__A
+                        0x20002d00    0x30  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Instance_State_2_packetArray__A
+                        0x20001c00   0x400  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Instance_init__E
+                        0x00005e99    0x68  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_Module__FXNS__C
+                        0x0000b324    0x60  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Module__diagsEnabled__C
+                        0x0000bd54     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Module__diagsIncluded__C
+                        0x0000bd58     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Module__diagsMask__C
+                        0x0000bd5c     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Module__id__C
+                        0x0000be0c     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Module__root__V
+                        0x2000044c     0x8  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Module_startup__E
+                        0x00005e03    0x96  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_Object__DESC__C
+                        0x0000b920    0x20  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Object__PARAMS__C
+                        0x0000b684    0x28  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Object__count__C
+                        0x0000bd60     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Object__create__S
+                        0x00004371    0x2a  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Object__delete__S
+                        0x0000439b    0x20  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Object__get__S
+                        0x00004365     0xc  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_Object__table__V
+                        0x20000454    0x9c  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_disable__E
+                        0x00005f01    0x1a  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_enable__E
+                        0x00005f1b    0x1a  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_flush__E
+                        0x00005d99    0x6a  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_getContents__E
+                        0x0000601d     0x4  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_getFilterLevel__E
+                        0x00003dab     0x4  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_getInstanceId__E
+                        0x00005f35     0x8  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_getMaxLength__E
+                        0x00005f43     0x4  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_getPriority__E
+                        0x00005f3d     0x4  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_getTransferType__E
+                        0x00005f7b     0x4  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_initQueueDescriptor__E
+                        0x00005f7f    0x86  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_isEmpty__E
+                        0x00006021    0x10  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_isTimestampEnabled__C
+                        0x0000be0e     0x2  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_reset__E
+                        0x00005f47    0x34  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_setFilterLevel__E
+                        0x00003da9     0x2  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_setPriority__E
+                        0x00005f41     0x2  Code  Gb  LoggerStopMode.orm4f [15]
+ti_uia_loggers_LoggerStopMode_write0__E
+                        0x00003b13    0x74  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_write1__E
+                        0x00003b87    0x7c  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_write2__E
+                        0x00003c03    0x82  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_write4__E
+                        0x00003c85    0x8a  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_write8__E
+                        0x00003d0f    0x9a  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_writeFinish
+                        0x00003ab3    0x60  Code  Lc  5_prm4f.orm4f [2]
+ti_uia_loggers_LoggerStopMode_writeMemoryRange__E
+                        0x00003daf   0x118  Code  Gb  5_prm4f.orm4f [2]
+ti_uia_runtime_ILoggerSnapshot_Interface__BASE__C
+                        0x0000bd64     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_runtime_IUIATransfer_Interface__BASE__C
+                        0x0000bd68     0x4  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_runtime_QueueDescriptor_Module__state__V
+                        0x2000078c     0xc  Data  Gb  5_prm4f.orm4f [2]
+ti_uia_runtime_QueueDescriptor_addToList__E
+                        0x00006939    0x7c  Code  Gb  QueueDescriptor.orm4f [16]
+ti_uia_runtime_QueueDescriptor_gPtrToFirstDescriptor
+                        0x20002d70     0x4  Data  Gb  QueueDescriptor.orm4f [16]
+ti_uia_runtime_QueueDescriptor_gUpdateCount
+                        0x20002d74     0x4  Data  Gb  QueueDescriptor.orm4f [16]
+uartMSP432Baudrates     0x0000b2b4    0x70  Data  Gb  MSP_EXP432P401R.o [1]
+uartMSP432HWAttrs       0x0000b3e0    0x48  Data  Gb  MSP_EXP432P401R.o [1]
+uartMSP432Objects       0x20002840   0x100  Data  Gb  MSP_EXP432P401R.o [1]
+uartMSP432RingBuffer    0x20002b50    0x40  Data  Gb  MSP_EXP432P401R.o [1]
+writeData               0x0000a215    0x92  Code  Lc  UARTMSP432.orm4f [6]
+writeSemCallback        0x0000a2a7     0x8  Code  Lc  UARTMSP432.orm4f [6]
+xdc_runtime_Assert_E_assertFailed__C
+                        0x0000bd6c     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Assert_raise__I
+                        0x000043fd    0x3c  Code  Gb  Assert.orm4f [8]
+xdc_runtime_Core_A_initializedParams__C
+                        0x0000bd70     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Core_Module__diagsEnabled__C
+                        0x0000bd74     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Core_Module__diagsIncluded__C
+                        0x0000bd78     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Core_Module__diagsMask__C
+                        0x0000bd7c     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Core_Module__id__C
+                        0x0000be10     0x2  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Core_assignLabel__I
+                        0x000061bd    0x30  Code  Gb  Core-label.orm4f [8]
+xdc_runtime_Core_assignParams__I
+                        0x000061ed    0x48  Code  Gb  Core-params.orm4f [8]
+xdc_runtime_Core_constructObject__I
+                        0x00006235    0xac  Code  Gb  Core-smem.orm4f [8]
+xdc_runtime_Core_createObject__I
+                        0x000062f5    0xe6  Code  Gb  Core-mem.orm4f [8]
+xdc_runtime_Core_deleteObject__I
+                        0x000063f1    0x62  Code  Gb  Core-mem.orm4f [8]
+xdc_runtime_Error_E_memory__C
+                        0x0000bd80     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_Module__diagsEnabled__C
+                        0x0000bd84     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_Module__diagsIncluded__C
+                        0x0000bd88     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_Module__diagsMask__C
+                        0x0000bd8c     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_Module__loggerDefined__C
+                        0x0000be12     0x2  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_Module__loggerFxn8__C
+                        0x0000bd90     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_Module__loggerObj__C
+                        0x0000bd94     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_Module__state__V
+                        0x20000798     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_check__E
+                        0x000044cd    0x1a  Code  Gb  Error.orm4f [8]
+xdc_runtime_Error_init__E
+                        0x000044c1     0xc  Code  Gb  Error.orm4f [8]
+xdc_runtime_Error_maxDepth__C
+                        0x0000be14     0x2  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_policyDefault__E
+                        0x00004547    0xb6  Code  Gb  Error.orm4f [8]
+xdc_runtime_Error_policyFxn__C
+                        0x0000bd98     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_policy__C
+                        0x0000be22     0x1  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_print__E
+                        0x000044e7    0x46  Code  Gb  Error.orm4f [8]
+xdc_runtime_Error_raiseHook__C
+                        0x0000bd9c     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Error_raiseX__E
+                        0x0000452d    0x1a  Code  Gb  Error.orm4f [8]
+xdc_runtime_Error_setX__E
+                        0x000045fd    0x3c  Code  Gb  Error.orm4f [8]
+xdc_runtime_Gate_enterSystem__E
+                        0x0000645d     0x8  Code  Gb  Gate.orm4f [8]
+xdc_runtime_Gate_leaveSystem__E
+                        0x00006465     0xa  Code  Gb  Gate.orm4f [8]
+xdc_runtime_IFilterLogger_Interface__BASE__C
+                        0x0000bda0     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_IGateProvider_Interface__BASE__C
+                        0x0000bda4     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_IHeap_Interface__BASE__C
+                        0x0000bda8     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_ILogger_Interface__BASE__C
+                        0x0000bdac     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_IModule_Interface__BASE__C
+                        0x0000bdb0     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Log_L_error__C
+                        0x0000bdb4     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Memory_HeapProxy_alloc__E
+                        0x00003f3d     0xa  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Memory_HeapProxy_free__E
+                        0x00003f47     0x6  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Memory_Module__id__C
+                        0x0000be16     0x2  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Memory_Module__state__V
+                        0x2000079c     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Memory_alloc__E
+                        0x000046c9    0x5e  Code  Gb  Memory.orm4f [8]
+xdc_runtime_Memory_calloc__E
+                        0x00004727    0x6c  Code  Gb  Memory.orm4f [8]
+xdc_runtime_Memory_defaultHeapInstance__C
+                        0x0000bdb8     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Memory_free__E
+                        0x00004793     0xa  Code  Gb  Memory.orm4f [8]
+xdc_runtime_Registry_Module__state__V
+                        0x200007a0     0x8  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Registry_findById__E
+                        0x000064b5    0x36  Code  Gb  Registry.orm4f [8]
+xdc_runtime_Startup_Module__state__V
+                        0x200007a8     0x8  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup__EXECFXN__C {Abs}
+                        0x00000001           --   Gb  command line/config [3]
+xdc_runtime_Startup__RESETFXN__C {Abs}
+                        0x00000001           --   Gb  command line/config [3]
+xdc_runtime_Startup_execImpl__C
+                        0x0000bdbc     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_exec__E
+                        0x00004949    0x46  Code  Gb  Startup.orm4f [8]
+xdc_runtime_Startup_exec__I
+                        0x000038e9    0x10  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_firstFxns__A
+                        0x0000baa0    0x10  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_firstFxns__C
+                        0x0000bb48     0x8  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_lastFxns__A
+                        0x0000bdc0     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_lastFxns__C
+                        0x0000bb50     0x8  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_maxPasses__C
+                        0x0000bdc4     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_reset__I
+                        0x000038f9    0x12  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_rtsDone__E
+                        0x0000498f     0x6  Code  Gb  Startup.orm4f [8]
+xdc_runtime_Startup_sfxnRts__A
+                        0x0000ba18    0x18  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_sfxnRts__C
+                        0x0000bdc8     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_sfxnTab__A
+                        0x0000b59c    0x2c  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_sfxnTab__C
+                        0x0000bdcc     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Startup_startMods__I
+                        0x00004995    0xb8  Code  Gb  Startup.orm4f [8]
+xdc_runtime_SysMin_Module_State_0_outbuf__A
+                        0x20002a80    0x80  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_SysMin_Module__state__V
+                        0x200007b0     0xc  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_SysMin_Module_startup__E
+                        0x000060b1    0x1a  Code  Gb  SysMin.orm4f [8]
+xdc_runtime_SysMin_abort__E
+                        0x000060cd    0x4c  Code  Gb  SysMin.orm4f [8]
+xdc_runtime_SysMin_bufSize__C
+                        0x0000bdd0     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_SysMin_exit__E
+                        0x00006119    0x14  Code  Gb  SysMin.orm4f [8]
+xdc_runtime_SysMin_flushAtExit__C
+                        0x0000be18     0x2  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_SysMin_flush__E
+                        0x00006173    0x38  Code  Gb  SysMin.orm4f [8]
+xdc_runtime_SysMin_outputFunc__C
+                        0x0000bdd4     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_SysMin_output__I
+                        0x000039c7    0x26  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_SysMin_putch__E
+                        0x0000612d    0x38  Code  Gb  SysMin.orm4f [8]
+xdc_runtime_SysMin_ready__E
+                        0x00006165     0xe  Code  Gb  SysMin.orm4f [8]
+xdc_runtime_System_Module_GateProxy_enter__E
+                        0x00003f4d     0x4  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_Module_GateProxy_leave__E
+                        0x00003f51     0x4  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_Module_State_0_atexitHandlers__A
+                        0x20002d68     0x8  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_Module__gateObj__C
+                        0x0000bdd8     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_Module__state__V
+                        0x200007bc     0x8  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_Module_startup__E
+                        0x00004d2d     0x6  Code  Gb  System.orm4f [8]
+xdc_runtime_System_SupportProxy_abort__E
+                        0x00003f55     0x4  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_SupportProxy_exit__E
+                        0x00003f59     0x4  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_SupportProxy_flush__E
+                        0x00003f5d     0x4  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_SupportProxy_putch__E
+                        0x00003f61     0x4  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_SupportProxy_ready__E
+                        0x00003f65     0x4  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_abortFxn__C
+                        0x0000bddc     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_abortStd__E
+                        0x00004dbd     0x6  Code  Gb  System.orm4f [8]
+xdc_runtime_System_abort__E
+                        0x00004d33    0x1a  Code  Gb  System.orm4f [8]
+xdc_runtime_System_aprintf__E
+                        0x00003ed9     0xe  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_aprintf_va__F
+                        0x00004dcd     0x2  Code  Gb  System.orm4f [8]
+xdc_runtime_System_atexit__E
+                        0x00004d4d    0x36  Code  Gb  System.orm4f [8]
+xdc_runtime_System_avprintf__E
+                        0x00004dcf    0x2a  Code  Gb  System.orm4f [8]
+xdc_runtime_System_doPrint__I
+                        0x0000532d   0x508  Code  Gb  System.orm4f [8]
+xdc_runtime_System_exitFxn__C
+                        0x0000bde0     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_exitStd__E
+                        0x00004dc3     0x6  Code  Gb  System.orm4f [8]
+xdc_runtime_System_exit__E
+                        0x00004d83    0x3a  Code  Gb  System.orm4f [8]
+xdc_runtime_System_extendFxn__C
+                        0x0000bde4     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_flush__E
+                        0x00004dc9     0x4  Code  Gb  System.orm4f [8]
+xdc_runtime_System_maxAtexitHandlers__C
+                        0x0000bde8     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_printfExtend__I
+                        0x0000390b    0xbc  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_printf__E
+                        0x00003ecb     0xe  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_System_printf_va__F
+                        0x00004df9     0x2  Code  Gb  System.orm4f [8]
+xdc_runtime_System_vprintf__E
+                        0x00004dfb    0x28  Code  Gb  System.orm4f [8]
+xdc_runtime_System_vsnprintf__E
+                        0x00004e25   0x508  Code  Gb  System.orm4f [8]
+xdc_runtime_Text_charCnt__C
+                        0x0000be1a     0x2  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_charTab__A
+                        0x00007f18  0x1f60  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_charTab__C
+                        0x0000bdec     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_cordText__E
+                        0x00004a95    0x1e  Code  Gb  Text.orm4f [8]
+xdc_runtime_Text_isLoaded__C
+                        0x0000be1c     0x2  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_nameEmpty__C
+                        0x0000bdf0     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_nameStatic__C
+                        0x0000bdf4     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_nameUnknown__C
+                        0x0000bdf8     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_nodeTab__A
+                        0x0000b140    0xfc  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_nodeTab__C
+                        0x0000bdfc     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_printVisFxn__I
+                        0x00004ab3    0x2c  Code  Gb  Text.orm4f [8]
+xdc_runtime_Text_putLab__E
+                        0x00004adf    0x56  Code  Gb  Text.orm4f [8]
+xdc_runtime_Text_putMod__E
+                        0x00004b35    0x6a  Code  Gb  Text.orm4f [8]
+xdc_runtime_Text_putSite__E
+                        0x00004b9f    0x7a  Code  Gb  Text.orm4f [8]
+xdc_runtime_Text_registryModsLastId__C
+                        0x0000be1e     0x2  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_ropeText__E
+                        0x00004c19     0xe  Code  Gb  Text.orm4f [8]
+xdc_runtime_Text_unnamedModsLastId__C
+                        0x0000be20     0x2  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_visitRope2__I
+                        0x00004c29    0x6c  Code  Gb  Text.orm4f [8]
+xdc_runtime_Text_visitRopeFxn__C
+                        0x0000be00     0x4  Data  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_visitRope__I
+                        0x000039ed     0xe  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Text_xprintf__I
+                        0x00004cc1    0x30  Code  Gb  Text.orm4f [8]
+xdc_runtime_Timestamp_SupportProxy_get32__E
+                        0x00003f79     0x4  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Timestamp_SupportProxy_get64__E
+                        0x00003f7d     0x4  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Timestamp_SupportProxy_getFreq__E
+                        0x00003f81     0x4  Code  Gb  5_prm4f.orm4f [2]
+xdc_runtime_Timestamp_get32__E
+                        0x0000493d     0x4  Code  Gb  Timestamp.orm4f [8]
+xdc_runtime_Timestamp_get64__E
+                        0x00004941     0x4  Code  Gb  Timestamp.orm4f [8]
+xdc_runtime_Timestamp_getFreq__E
+                        0x00004945     0x4  Code  Gb  Timestamp.orm4f [8]
+
+
+[1] = E:\Projects\ARM\5\Debug\Obj
+[2] = E:\Projects\ARM\5\configPkg\package\cfg
+[3] = command line
+[4] = boot.arm4f
+[5] = dl7M_tln.a
+[6] = drivers_MSP432P401R.arm4f
+[7] = drivers_wifi_MSP432P401R.arm4f
+[8] = iar.targets.arm.rts.arm4f
+[9] = m7M_tls.a
+[10] = msp432p4xx_driverlib.a
+[11] = power_tirtos_MSP432P401R.arm4f
+[12] = rt7M_tl.a
+[13] = sysbios.arm4f
+[14] = ti.mw.fatfs.arm4f
+[15] = ti.uia.loggers.arm4f
+[16] = ti.uia.runtime.arm4f
+[17] = tirtosport.arm4f
+
+  36 724 bytes of readonly  code memory
+  12 617 bytes of readonly  data memory
+  11 343 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
